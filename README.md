@@ -41,6 +41,7 @@ Full index: [`docs/PROJECT_INDEX.md`](docs/PROJECT_INDEX.md)
 - [`docs/10-security-operations/security-and-operations.md`](docs/10-security-operations/security-and-operations.md)
 - [`docs/11-validation/test-strategy.md`](docs/11-validation/test-strategy.md)
 - [`docs/12-implementation/roadmap-and-wbs.md`](docs/12-implementation/roadmap-and-wbs.md)
+- [`docs/13-ooad-deliverables/remaining-deliverables-plan.md`](docs/13-ooad-deliverables/remaining-deliverables-plan.md)
 
 ## Key Decisions Reflected
 

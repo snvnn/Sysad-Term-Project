@@ -56,6 +56,10 @@
 
 - [Roadmap and WBS](12-implementation/roadmap-and-wbs.md)
 
+## 13. OOAD Deliverables
+
+- [Remaining OOAD deliverables plan](13-ooad-deliverables/remaining-deliverables-plan.md)
+
 ## Completion Criteria Coverage
 
 | Criterion | Covered By |
