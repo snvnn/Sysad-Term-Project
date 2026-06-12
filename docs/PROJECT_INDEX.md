@@ -19,6 +19,7 @@
 
 - [Software requirements specification](03-requirements/software-requirements-specification.md)
 - [Requirements traceability matrix](03-requirements/requirements-traceability-matrix.md)
+- [Brief use cases](03-requirements/use-cases.md)
 
 ## 04. Domain
 

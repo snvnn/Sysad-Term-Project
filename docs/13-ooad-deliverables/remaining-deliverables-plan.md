@@ -44,7 +44,9 @@ Impact:
 
 ### Step 1. Brief Use Cases
 
-Target file:
+Status: `Completed`
+
+Output file:
 
 ```text
 docs/03-requirements/use-cases.md
