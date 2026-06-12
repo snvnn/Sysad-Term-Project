@@ -51,7 +51,7 @@ Full index: [`docs/PROJECT_INDEX.md`](docs/PROJECT_INDEX.md)
 - [`docs/11-validation/test-strategy.md`](docs/11-validation/test-strategy.md)
 - [`docs/12-implementation/roadmap-and-wbs.md`](docs/12-implementation/roadmap-and-wbs.md)
 - [`docs/13-ooad-deliverables/remaining-deliverables-plan.md`](docs/13-ooad-deliverables/remaining-deliverables-plan.md)
-- [`docs/14-report/analysis-design-report-draft.md`](docs/14-report/analysis-design-report-draft.md)
+- [`docs/14-report/analysis-design-report-draft.md` - 분석 및 설계 보고서 초안](docs/14-report/analysis-design-report-draft.md)
 
 ## Key Decisions Reflected
 

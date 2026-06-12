@@ -71,9 +71,9 @@
 
 - [Remaining OOAD deliverables plan](13-ooad-deliverables/remaining-deliverables-plan.md)
 
-## 14. Report Draft
+## 14. 보고서 초안
 
-- [Analysis and design report draft](14-report/analysis-design-report-draft.md)
+- [분석 및 설계 보고서 초안](14-report/analysis-design-report-draft.md)
 
 ## Completion Criteria Coverage
 
@@ -86,5 +86,5 @@
 | ADR candidates documented | Architecture design |
 | Implementation-ready WBS exists | Roadmap and WBS |
 | Domain decisions separated | Core questions, SRS decisions |
-| Process and deliverable narrative exists | Analysis and design report draft |
+| Process and deliverable narrative exists | 분석 및 설계 보고서 초안 |
 | No implementation performed | Scope statement |
