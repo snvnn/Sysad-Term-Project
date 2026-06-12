@@ -9,6 +9,7 @@
 - 구현하지 않는다.
 - DB/API/배포 환경을 변경하지 않는다.
 - 요구사항, 도메인, 아키텍처, 데이터, UI, 보안, 테스트 전략, 구현 계획을 문서화한다.
+- Rich Picture는 사용자가 수기로 작성해 별도 제출하며, 이 저장소는 텍스트 산출물과 draw.io 다이어그램 원본을 관리한다.
 
 ## Documentation Index
 
@@ -40,6 +41,10 @@ Full index: [`docs/PROJECT_INDEX.md`](docs/PROJECT_INDEX.md)
 - [`docs/06-architecture/architecture-design.md`](docs/06-architecture/architecture-design.md)
 - [`docs/07-interfaces/api-contract.md`](docs/07-interfaces/api-contract.md)
 - [`docs/07-design/operation-contracts.md`](docs/07-design/operation-contracts.md)
+- [`docs/07-design/class-diagram.md`](docs/07-design/class-diagram.md)
+- [`docs/07-design/class-diagram.drawio`](docs/07-design/class-diagram.drawio)
+- [`docs/07-design/sequence-diagrams.md`](docs/07-design/sequence-diagrams.md)
+- [`docs/07-design/sequence-diagrams.drawio`](docs/07-design/sequence-diagrams.drawio)
 - [`docs/08-data/data-model.md`](docs/08-data/data-model.md)
 - [`docs/09-ui/report-specification.md`](docs/09-ui/report-specification.md)
 - [`docs/10-security-operations/security-and-operations.md`](docs/10-security-operations/security-and-operations.md)

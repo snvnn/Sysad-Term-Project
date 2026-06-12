@@ -27,6 +27,8 @@
 | OC-007 | `checkHomeFundability(...)` | UC-005 | SSD-003 | Fundability result 산출, 상태 변경 없음 |
 | OC-008 | `recordFundAllocation(...)` | UC-006 | SSD-003 | FundAllocation 생성 및 remaining amount 차감 |
 | OC-009 | `generateWeeklyFundsReport(...)` | UC-007 | SSD-004 | Report view 생성, 선택적으로 audit event 기록 |
+| OC-010 | `generateInvestmentListingReport(...)` | UC-008 | SSD-004 | Investment listing report view 생성 |
+| OC-011 | `generateMortgageListingReport(...)` | UC-009 | SSD-004 | Mortgage listing report view 생성 |
 
 ## 4. Contracts
 
@@ -119,6 +121,26 @@
 | Preconditions | Actor is authorized to view the weekly funds report. `WeeklyComputation` with `computationId` exists. |
 | Postconditions | A weekly funds report view is produced. The report includes week start date, formula version, generated timestamp, input summary, expected mortgage repayments, expected grants, starting available amount, allocations, remaining available amount, data freshness warnings, and Q-008 warning if unresolved. Source data is not modified. If audit logging is enabled, a report-generated audit event is recorded. |
 | Notes | Output may be screen, printable text/HTML, or other developer-selected medium as long as print-on-request is supported. |
+
+### OC-010. generateInvestmentListingReport
+
+| Field | Description |
+|---|---|
+| Operation | `generateInvestmentListingReport()` |
+| Cross References | UC-008, SSD-004, FR-016, DR-001, NFR-002, NFR-003 |
+| Preconditions | Actor is authorized to view investment reports. Investment records may be empty, but the report request is valid. |
+| Postconditions | An investment listing report view is produced. The report includes each investment item number, item name, estimated annual return, and return last updated date. If no investments exist, the report includes an empty-state message. Source data is not modified. If audit logging is enabled, a report-generated audit event is recorded. |
+| Notes | This operation supports the required investment listing report and is separate from creating or updating investment records. |
+
+### OC-011. generateMortgageListingReport
+
+| Field | Description |
+|---|---|
+| Operation | `generateMortgageListingReport()` |
+| Cross References | UC-009, SSD-004, FR-017, DR-003, NFR-002, NFR-003, NFR-005 |
+| Preconditions | Actor is authorized to view mortgage reports and any sensitive income fields included by their role. Mortgage records may be empty, but the report request is valid. |
+| Postconditions | A mortgage listing report view is produced. The report includes account number, mortgagees last name, original purchase price, issue date, weekly P&I, current weekly income where authorized, income/tax/insurance update dates, annual tax, annual insurance premium, and estimated weekly grant. If no mortgages exist, the report includes an empty-state message. Source data is not modified. If audit logging is enabled, a report-generated audit event is recorded. |
+| Notes | This operation does not perform applicant eligibility screening, 90% mortgage comparison, or employment evidence verification. |
 
 ## 5. Out-of-Pilot Operation Candidates
 

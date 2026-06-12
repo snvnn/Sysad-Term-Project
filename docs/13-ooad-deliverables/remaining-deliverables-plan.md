@@ -9,11 +9,11 @@
 | Item | Decision |
 |---|---|
 | Rich Picture | 사용자가 수기로 작성하므로 이 저장소에서는 작성하지 않음. 필요 시 사진/스캔본 링크만 추가. |
-| Brief Use Cases | 작성 대상. 짧고 제출용으로 읽기 쉬운 스타일 유지. |
-| System Sequence Diagrams, SSD | 작성 대상. Actor ↔ System 경계만 표현하고 내부 객체는 넣지 않음. |
-| Operation Contracts | 작성 대상. 각 시스템 오퍼레이션의 precondition/postcondition 중심. |
-| Class Diagram | 작성 대상. 업그레이드된 도메인 모델에 attributes/methods/relationships를 반영. |
-| Design Sequence Diagrams | 작성 대상. 내부 객체 간 협력 흐름을 표현. |
+| Brief Use Cases | 완료됨. 짧고 제출용으로 읽기 쉬운 스타일 유지. |
+| System Sequence Diagrams, SSD | 완료됨. Actor ↔ System 경계만 표현하고 내부 객체는 넣지 않음. |
+| Operation Contracts | 완료됨. 각 시스템 오퍼레이션의 precondition/postcondition 중심. |
+| Class Diagram | 완료됨. 업그레이드된 도메인 모델에 attributes/methods/relationships를 반영. |
+| Design Sequence Diagrams | 완료됨. 내부 객체 간 협력 흐름을 표현. |
 | Domain open issue cleanup | 완료됨. 현재 핵심 도메인 open issue는 Q-008 하나만 남음. |
 
 ## 3. Current Remaining Open Issues
@@ -131,6 +131,8 @@ Candidate contracts:
 | OC-007 | checkHomeFundability | UC-005 |
 | OC-008 | recordFundAllocation | UC-006 |
 | OC-009 | generateWeeklyFundsReport | UC-007 |
+| OC-010 | generateInvestmentListingReport | UC-008 |
+| OC-011 | generateMortgageListingReport | UC-009 |
 
 Required fields per contract:
 
@@ -147,10 +149,13 @@ Verification:
 
 ### Step 4. Class Diagram
 
-Target file:
+Status: `Completed`
+
+Output files:
 
 ```text
 docs/07-design/class-diagram.md
+docs/07-design/class-diagram.drawio
 ```
 
 Candidate classes:
@@ -176,20 +181,30 @@ Verification:
 
 ### Step 5. Design Sequence Diagrams
 
-Target file:
+Status: `Completed`
+
+Output files:
 
 ```text
 docs/07-design/sequence-diagrams.md
+docs/07-design/sequence-diagrams.drawio
 ```
 
-Candidate diagrams:
+Included diagrams:
 
 | ID | Sequence Diagram | Related Use Case / Contract |
 |---|---|---|
-| SD-001 | Run Weekly Funds Computation | UC-004 / OC-006 |
-| SD-002 | Check Home Fundability | UC-005 / OC-007 |
-| SD-003 | Record Fund Allocation | UC-006 / OC-008 |
-| SD-004 | Generate Weekly Funds Report | UC-007 / OC-009 |
+| DSD-001 | Create Investment | UC-001 / OC-001 |
+| DSD-002 | Update Investment Return | UC-001 / OC-002 |
+| DSD-003 | Update Operating Expense Estimate | UC-002 / OC-003 |
+| DSD-004 | Create Mortgage | UC-003 / OC-004 |
+| DSD-005 | Update Mortgage Income | UC-003 / OC-005 |
+| DSD-006 | Run Weekly Funds Computation | UC-004 / OC-006 |
+| DSD-007 | Check Home Fundability | UC-005 / OC-007 |
+| DSD-008 | Record Fund Allocation | UC-006 / OC-008 |
+| DSD-009 | Generate Weekly Funds Report | UC-007 / OC-009 |
+| DSD-010 | Generate Investment Listing Report | UC-008 / OC-010 |
+| DSD-011 | Generate Mortgage Listing Report | UC-009 / OC-011 |
 
 Rules:
 
@@ -228,12 +243,12 @@ After each deliverable is created:
 
 The OOAD package is ready when:
 
-- Rich Picture is acknowledged as user-owned/manual.
-- Brief Use Cases exist and cover Must requirements.
-- SSDs exist and stay at actor-system boundary.
-- Operation Contracts define pre/postconditions for core operations.
-- Class Diagram includes attributes, methods, and relationships.
-- Design Sequence Diagrams show internal collaboration for core flows.
-- Remaining open issues are explicitly documented, especially Q-008.
-- Project index and README point to all deliverables.
-- Git history shows incremental commits for each step.
+- [x] Rich Picture is acknowledged as user-owned/manual.
+- [x] Brief Use Cases exist and cover Must requirements.
+- [x] SSDs exist and stay at actor-system boundary.
+- [x] Operation Contracts define pre/postconditions for core operations.
+- [x] Class Diagram includes attributes, methods, and relationships.
+- [x] Design Sequence Diagrams show internal collaboration for core flows.
+- [x] Remaining open issues are explicitly documented, especially Q-008.
+- [x] Project index and README point to all deliverables.
+- [ ] A docs-focused commit is created if the submission workflow requires Git history.

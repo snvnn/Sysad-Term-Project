@@ -42,6 +42,10 @@
 ## 07. Design
 
 - [Operation contracts](07-design/operation-contracts.md)
+- [Class diagram](07-design/class-diagram.md)
+- [Class diagram draw.io](07-design/class-diagram.drawio)
+- [Design sequence diagrams](07-design/sequence-diagrams.md)
+- [Design sequence diagrams draw.io](07-design/sequence-diagrams.drawio)
 
 ## 08. Data
 

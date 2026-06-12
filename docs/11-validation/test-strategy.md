@@ -24,6 +24,10 @@
 
 - 실제 은행/보험/세무 API 연동
 - 실제 대출 계약 실행
+- 수혜자 자격 심사
+- 90% commercial mortgage comparison
+- 고용 증거 확인
+- 지역 중간 주택 가격 비교
 - 세금 신고서/급여 명세서 OCR 검증
 - 성능 부하 테스트 대규모 시나리오
 - 외부 인증 시스템 연동
@@ -81,7 +85,18 @@
 | TC-RPT-002 | FR-016 | investments exist | investment report includes item number/name/return/update date |
 | TC-RPT-003 | FR-017 | mortgages exist | mortgage report includes all required fields and estimated grant |
 
-## 8. Non-functional Validation
+## 8. Out-of-Pilot Scope Review
+
+These requirements are intentionally not test cases for the pilot. The validation activity is a scope review confirming they remain outside the implemented/design pilot boundary.
+
+| Requirement | Scope Review Check |
+|---|---|
+| FR-018 | Marriage-duration eligibility remains outside pilot workflows, contracts, and diagrams. |
+| FR-019 | Employment evidence verification remains outside pilot workflows, contracts, and diagrams. |
+| FR-020 | Local median home price comparison remains outside pilot workflows, contracts, and diagrams. |
+| FR-021 | 90% mortgage/savings condition remains outside pilot workflows, contracts, and diagrams. |
+
+## 9. Non-functional Validation
 
 | NFR | Validation Method |
 |---|---|
@@ -93,7 +108,7 @@
 | NFR-006 Auditability | verify audit records for data changes and computations |
 | NFR-007 Extensibility | architecture review against module boundaries |
 
-## 9. Test Data Set
+## 10. Test Data Set
 
 A minimal deterministic test dataset should include:
 
@@ -107,7 +122,7 @@ A minimal deterministic test dataset should include:
 - 1 fundability pass case
 - 1 fundability fail case
 
-## 10. Acceptance Gate for Implementation Phase
+## 11. Acceptance Gate for Implementation Phase
 
 Implementation should not be considered ready unless:
 
