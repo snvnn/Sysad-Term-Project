@@ -44,6 +44,7 @@
 - [Operation contracts](07-design/operation-contracts.md)
 - [Class diagram](07-design/class-diagram.md)
 - [Class diagram draw.io](07-design/class-diagram.drawio)
+- [Class cards](07-design/class-cards.md)
 - [Design sequence diagrams](07-design/sequence-diagrams.md)
 - [Design sequence diagrams draw.io](07-design/sequence-diagrams.drawio)
 
@@ -84,6 +85,7 @@
 | System boundary and component responsibilities defined | Architecture design |
 | Data/API/UI/security designs are aligned | API contract, data model, report spec, security docs |
 | ADR candidates documented | Architecture design |
+| Class responsibilities and associations role-playable | Class cards |
 | Implementation-ready WBS exists | Roadmap and WBS |
 | Domain decisions separated | Core questions, SRS decisions |
 | Process and deliverable narrative exists | 분석 및 설계 보고서 초안 |

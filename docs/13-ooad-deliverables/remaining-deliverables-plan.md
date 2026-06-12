@@ -13,6 +13,7 @@
 | System Sequence Diagrams, SSD | 완료됨. Actor ↔ System 경계만 표현하고 내부 객체는 넣지 않음. |
 | Operation Contracts | 완료됨. 각 시스템 오퍼레이션의 precondition/postcondition 중심. |
 | Class Diagram | 완료됨. 업그레이드된 도메인 모델에 attributes/methods/relationships를 반영. |
+| Class Cards | 완료됨. 롤플레잉 검증용으로 클래스별 역할, attributes, responsibilities/operations, associations를 정리. |
 | Design Sequence Diagrams | 완료됨. 내부 객체 간 협력 흐름을 표현. |
 | Domain decision cleanup | 완료됨. Q-008까지 사용자 결정으로 확정되어 현재 핵심 도메인 미확정 이슈는 없음. |
 
@@ -184,7 +185,30 @@ Verification:
 - Methods must support operation contracts.
 - Relationships and multiplicities must match domain model.
 
-### Step 5. Design Sequence Diagrams
+### Step 5. Class Cards
+
+Status: `Completed`
+
+Output file:
+
+```text
+docs/07-design/class-cards.md
+```
+
+Required fields per card:
+
+- 클래스 이름과 역할
+- 알아야 될 정보, attribute
+- 행해야 될 정보, responsibility / operation
+- 의존성, association
+
+Verification:
+
+- Class Diagram의 모든 주요 클래스가 카드로 있어야 함.
+- 각 카드는 롤플레잉 검증에서 "내가 모르는 정보를 누구에게 물어볼 수 있는가"를 판단할 수 있어야 함.
+- Q-008 계산 책임은 `MortgageCalculator`와 `FundsAvailabilityCalculator` 카드에 명시되어야 함.
+
+### Step 6. Design Sequence Diagrams
 
 Status: `Completed`
 

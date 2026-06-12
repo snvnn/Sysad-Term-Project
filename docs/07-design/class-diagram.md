@@ -10,6 +10,12 @@ Draw.io file:
 docs/07-design/class-diagram.drawio
 ```
 
+Companion class card file:
+
+```text
+docs/07-design/class-cards.md
+```
+
 ## 2. Included Classes
 
 | Class | Key Attributes | Key Operations |
@@ -56,3 +62,4 @@ weekly investment income - weekly operating expenses + expected mortgage repayme
 - [x] Relationships and multiplicities match the domain model.
 - [x] Q-008 calculation responsibility is visible and resolved.
 - [x] Draw.io file contains the class diagram source.
+- [x] Companion class cards document the class role, attributes, responsibilities/operations, and associations.
