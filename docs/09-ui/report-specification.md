@@ -5,7 +5,7 @@
 - Report-first: primary user goal is to obtain trustworthy weekly calculations and listings.
 - Minimal navigation: file pilot should avoid complex workflows.
 - Data freshness visibility: every report should show last updated dates for inputs.
-- Explicit warnings: unresolved formula assumptions should be displayed until confirmed.
+- Explicit warnings: unresolved items such as expected mortgage repayment scope should be displayed until confirmed.
 
 ## 2. Information Architecture
 
@@ -75,12 +75,20 @@ flowchart TD
   - stale input data
   - missing data
 
+Formula used:
+
+```text
+available = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants
+```
+
+Open warning to display until resolved: `expected mortgage repayments` currently uses the recommended beneficiary-paid interpretation but remains subject to final domain discussion.
+
 ### Example Layout
 
 ```text
 MSG Foundation — Weekly Funds Computation
 Week of: 2026-06-15
-Formula: draft-v1 [Needs Verification]
+Formula: Q-001 resolved — income - expenses + repayments - grants
 
 Investment income this week:      $100,000.00
 Operating expense this week:      $ 10,000.00

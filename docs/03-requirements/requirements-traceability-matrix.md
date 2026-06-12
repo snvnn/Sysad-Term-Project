@@ -11,9 +11,9 @@
 | FR-007 | PDF p.3 total weekly payment | `docs/04-domain/domain-model.md` BR-004 | TC-CALC-004 | Draft |
 | FR-008 | PDF p.3 28% income limit | `docs/04-domain/domain-model.md` BR-005 | TC-CALC-005 | Draft |
 | FR-009 | PDF p.3 grant difference | `docs/04-domain/domain-model.md` BR-006 | TC-CALC-006 | Draft |
-| FR-010 | PDF p.3-4 total expected repayments | `docs/03-requirements/software-requirements-specification.md` OI-REQ-002 | TC-CALC-007 | Needs Verification |
+| FR-010 | PDF p.3-4 total expected repayments | `docs/03-requirements/software-requirements-specification.md` OI-REQ-002 | TC-CALC-007 | Open / Needs Discussion |
 | FR-011 | PDF p.3-4 total grants | `docs/07-interfaces/api-contract.md` computation | TC-CALC-008 | Draft |
-| FR-012 | PDF p.4 amount available | `docs/03-requirements/software-requirements-specification.md` OI-REQ-001 | TC-CALC-009 | Needs Verification |
+| FR-012 | PDF p.4 amount available | `docs/03-requirements/software-requirements-specification.md` BR-009 | TC-CALC-009 | Resolved |
 | FR-013 | PDF p.4 home cost <= mortgage amount | `docs/07-interfaces/api-contract.md` fundability | TC-FUND-001 | Draft |
 | FR-014 | PDF p.4 reduce available amount | `docs/08-data/data-model.md` FundAllocation | TC-FUND-002 | Draft |
 | FR-015 | PDF p.5 weekly funds report | `docs/09-ui/report-specification.md` | TC-RPT-001 | Draft |
@@ -22,4 +22,4 @@
 | FR-018 | PDF p.3 marriage duration | Future eligibility module | TC-ELIG-001 | Out of Pilot |
 | FR-019 | PDF p.3 employment evidence | Future eligibility module | TC-ELIG-002 | Out of Pilot |
 | FR-020 | PDF p.3 median area home price | Future eligibility module | TC-ELIG-003 | Out of Pilot |
-| FR-021 | PDF p.3 90% mortgage/savings condition | Future eligibility module | TC-ELIG-004 | Needs Verification |
+| FR-021 | PDF p.3 90% mortgage/savings condition | Future eligibility module | TC-ELIG-004 | Out of Pilot |

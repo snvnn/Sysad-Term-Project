@@ -41,17 +41,17 @@
 
 ## 4. Calculation Test Cases
 
-| Test ID | Requirement | Scenario | Expected Result |
-|---|---|---|---|
-| TC-CALC-001 | FR-004 | annual investment return sum = 52000 | weekly investment income = 1000 |
-| TC-CALC-002 | FR-005 | annual operating expense = 26000 | weekly operating expense = 500 |
-| TC-CALC-003 | FR-006 | tax=5200, insurance=1040 | weekly escrow = 120 |
-| TC-CALC-004 | FR-007 | weekly P&I=600, escrow=120 | total weekly mortgage cost = 720 |
-| TC-CALC-005 | FR-008 | weekly income=2000 | affordability cap = 560 |
-| TC-CALC-006 | FR-009 | total cost=720, cap=560 | weekly grant = 160 |
-| TC-CALC-007 | FR-010 | active mortgages with defined repayment interpretation | expected mortgage repayments matches formula | Needs Verification |
-| TC-CALC-008 | FR-011 | two grants 160 and 0 | expected grants = 160 |
-| TC-CALC-009 | FR-012 | investment=1000, expense=500, repayments=720, grants=160 | available amount depends on confirmed formula | Needs Verification |
+| Test ID | Requirement | Scenario | Expected Result | Status |
+|---|---|---|---|---|
+| TC-CALC-001 | FR-004 | annual investment return sum = 52000 | weekly investment income = 1000 | Draft |
+| TC-CALC-002 | FR-005 | annual operating expense = 26000 | weekly operating expense = 500 | Draft |
+| TC-CALC-003 | FR-006 | tax=5200, insurance=1040 | weekly escrow = 120 | Draft |
+| TC-CALC-004 | FR-007 | weekly P&I=600, escrow=120 | total weekly mortgage cost = 720 | Draft |
+| TC-CALC-005 | FR-008 | weekly income=2000 | affordability cap = 560 | Draft |
+| TC-CALC-006 | FR-009 | total cost=720, cap=560 | weekly grant = 160 | Draft |
+| TC-CALC-007 | FR-010 | active mortgages using recommended beneficiary-paid interpretation | expected mortgage repayments equals sum of expected beneficiary-paid amounts | Open / Needs Discussion |
+| TC-CALC-008 | FR-011 | two grants 160 and 0 | expected grants = 160 | Draft |
+| TC-CALC-009 | FR-012 | investment=1000, expense=500, repayments=720, grants=160 | available amount = 1060 | Resolved |
 
 ## 5. Data Validation Test Cases
 
@@ -114,5 +114,5 @@ Implementation should not be considered ready unless:
 - all Must functional requirements have tests
 - all core calculation tests pass
 - report outputs include required fields
-- formula ambiguities are either resolved or visibly marked as draft behavior
+- resolved formula rules are implemented exactly and remaining open issues are visibly marked
 - no sensitive sample data is real personal data

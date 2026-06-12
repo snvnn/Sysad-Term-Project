@@ -110,7 +110,7 @@ Request:
 ```json
 {
   "weekStartDate": "2026-06-15",
-  "formulaVersion": "draft-v1"
+  "formulaVersion": "Q-001-resolved-v1"
 }
 ```
 
@@ -126,15 +126,15 @@ Response:
   "expectedGrants": "5000.00",
   "startingAvailableAmount": "110000.00",
   "remainingAvailableAmount": "110000.00",
-  "formulaVersion": "draft-v1",
-  "status": "DRAFT",
+  "formulaVersion": "Q-001-resolved-v1",
+  "status": "RESOLVED_FORMULA_WITH_OPEN_REPAYMENT_SCOPE",
   "warnings": [
-    "Available amount formula is marked Needs Verification."
+    "Expected mortgage repayments use the recommended beneficiary-paid interpretation; final domain confirmation is still required."
   ]
 }
 ```
 
-> Formula draft-v1 candidate: `weeklyInvestmentIncome - weeklyOperatingExpense + expectedMortgageRepayments - expectedGrants`.
+> Formula Q-001-resolved-v1: `weeklyInvestmentIncome - weeklyOperatingExpense + expectedMortgageRepayments - expectedGrants`.
 
 #### `POST /weekly-computations/{id}/fundability-checks`
 
@@ -204,7 +204,7 @@ Returns all mortgages listing.
 | VALIDATION_ERROR | Input field invalid. |
 | NOT_FOUND | Requested resource does not exist. |
 | DUPLICATE_ID | item number/account number already exists. |
-| FORMULA_UNCONFIRMED | Operation depends on a Needs Verification rule. |
+| OPEN_DOMAIN_DECISION | Operation depends on a still-open domain interpretation, such as expected mortgage repayment scope. |
 | INSUFFICIENT_FUNDS | Allocation exceeds remaining weekly available amount. |
 
 ## 5. Compatibility Rules

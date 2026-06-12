@@ -19,9 +19,9 @@
 | FR-007 | 시스템은 각 모기지의 총 주간 모기지 비용을 계산해야 한다. | Must | `weekly P&I + weekly escrow`를 계산한다. | PDF p.3 |
 | FR-008 | 시스템은 각 모기지의 부부 부담 한도를 계산해야 한다. | Must | `current combined gross weekly income * 0.28`을 계산한다. | PDF p.3 |
 | FR-009 | 시스템은 각 모기지의 주간 보조금 예상액을 계산해야 한다. | Must | `max(0, total weekly mortgage cost - income cap)`으로 계산한다. | PDF p.3 |
-| FR-010 | 시스템은 해당 주의 총 예상 모기지 상환액을 계산해야 한다. | Must | 활성 모기지들의 주간 상환 관련 금액 합계를 산출한다. 정확한 의미는 OI-REQ-001에 따름. | PDF p.3-4 |
+| FR-010 | 시스템은 해당 주의 총 예상 모기지 상환액을 계산해야 한다. | Must | 활성 모기지들의 수혜자 실제 예상 상환액 합계를 산출한다. 단, 정확한 합산 범위는 OI-REQ-002로 추가 논의한다. | PDF p.3-4 |
 | FR-011 | 시스템은 해당 주의 총 예상 보조금 금액을 계산해야 한다. | Must | 활성 모기지별 weekly grant estimate 합계를 산출한다. | PDF p.3-4 |
-| FR-012 | 시스템은 주 시작 시 사용 가능한 금액을 계산해야 한다. | Must | 투자수익, 운영비용, 모기지 상환액, 보조금 총액을 이용해 산출한다. 정확한 산식은 OI-REQ-001에 따름. | PDF p.3-4 |
+| FR-012 | 시스템은 주 시작 시 사용 가능한 금액을 계산해야 한다. | Must | `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`로 산출한다. | PDF p.3-4 + project decision Q-001 |
 | FR-013 | 시스템은 주택 비용이 가용 모기지 금액 이하인지 판단할 수 있어야 한다. | Should | 입력된 주택 비용이 current available amount 이하이면 fundable로 표시한다. | PDF p.4 |
 | FR-014 | 시스템은 승인된 주택 비용만큼 해당 주 가용 모기지 금액을 감소시켜야 한다. | Should | fund allocation record를 통해 weekly available amount가 감소한다. | PDF p.4 |
 | FR-015 | 시스템은 주간 자금 결산서를 생성해야 한다. | Must | 계산 입력, 계산 결과, 사용 가능 금액, 보조금 총액을 포함한다. | PDF p.5 |
@@ -35,7 +35,7 @@
 | FR-018 | 부부의 결혼 기간 조건을 검증한다. | Could | 결혼 기간이 1년 이상 10년 미만인지 판단한다. | Out of pilot unless confirmed |
 | FR-019 | 부부 양측의 유급 고용과 전년도 48주 정규직 고용 증거를 검증한다. | Could | 증빙 제출 여부를 기록한다. | Out of pilot unless confirmed |
 | FR-020 | 주택 가격이 지역 중간 가격보다 낮은지 검증한다. | Could | 지역 중간 가격 데이터와 비교한다. | Out of pilot unless confirmed |
-| FR-021 | 90% 모기지 조건 또는 저축 부족 조건을 판단한다. | Could | 일반 금융기관 이용 곤란 여부를 표시한다. | Needs Verification |
+| FR-021 | 90% 모기지 조건 또는 저축 부족 조건을 판단한다. | Could | 파일럿 범위 밖으로 보류한다. 자격 심사는 오프라인 수동 판단으로 처리한다. | Out of Pilot |
 
 ## 3. Non-functional Requirements
 
@@ -46,7 +46,7 @@
 | NFR-003 | 사용성 | Should | 컴퓨터 경험이 적은 수탁자/관리자도 보고서를 이해할 수 있어야 한다. |
 | NFR-004 | 최소 범위 | Must | 파일럿은 주간 자금 계산에 필요한 세 데이터 유형만 포함한다. |
 | NFR-005 | 보안 | Must | 소득/모기지 정보는 권한 있는 사용자만 조회/수정할 수 있다. |
-| NFR-006 | 감사 가능성 | Should | 계산 실행과 데이터 변경은 누가 언제 했는지 추적 가능해야 한다. |
+| NFR-006 | 감사 가능성 | Should | 파일럿에서는 각 데이터의 마지막 갱신일을 추적하고, 구현 확장 시 계산 실행/데이터 변경 감사 로그를 추가할 수 있다. |
 | NFR-007 | 확장성 | Should | 추후 신청 심사, 문서 관리, 외부 연동으로 확장 가능한 구조여야 한다. |
 | NFR-008 | 가용성 | Could | 파일럿은 업무 시간 중 사용 가능하면 충분하며 고가용성은 필수 아님. |
 
@@ -64,21 +64,24 @@
 
 | ID | Rule |
 |---|---|
-| BR-001 | Weekly investment income = sum(estimated annual return of all investments) / 52. |
-| BR-002 | Weekly operating expense = estimated annual operating expenses / 52. |
-| BR-003 | Weekly escrow payment = (annual real-estate tax + annual homeowner insurance premium) / 52. |
+| BR-001 | Weekly investment income = sum(estimated annual return of all investments) / 52, rounded to cents for stored/displayed values. |
+| BR-002 | Weekly operating expense = estimated annual operating expenses / 52, rounded to cents for stored/displayed values. |
+| BR-003 | Weekly escrow payment = (annual real-estate tax + annual homeowner insurance premium) / 52; taxes and insurance remain separate source fields but are aggregated for weekly calculation. |
 | BR-004 | Total weekly mortgage cost = weekly P&I + weekly escrow. |
 | BR-005 | Couple weekly affordability cap = current combined gross weekly income * 28%. |
 | BR-006 | Weekly grant = max(0, total weekly mortgage cost - affordability cap). |
 | BR-007 | A new home purchase is fundable within the current week if home cost <= remaining available mortgage amount. |
 | BR-008 | When a home purchase is funded, remaining weekly available amount decreases by home cost. |
+| BR-009 | Starting available amount = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants. |
+| BR-010 | Week start is the first business day of the week; week end is the last business day, excluding public holidays and foundation closure days. |
 
 ## 6. Open Issues
 
-| ID | Issue | Impact |
-|---|---|---|
-| OI-REQ-001 | Starting available amount formula sign convention is ambiguous. | Affects core computation. |
-| OI-REQ-002 | Meaning of “total expected mortgage repayments” is ambiguous. | Affects weekly funds report. |
-| OI-REQ-003 | Whether eligibility screening is in pilot scope is ambiguous. | Affects data model and UI. |
-| OI-REQ-004 | Report medium is not specified. | Affects architecture/UI. |
-| OI-REQ-005 | Rounding rules are not specified. | Affects financial correctness. |
+| ID | Issue | Status | Impact / Resolution |
+|---|---|---|---|
+| OI-REQ-001 | Starting available amount formula sign convention. | Resolved | Use `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`. |
+| OI-REQ-002 | Meaning of “total expected mortgage repayments”. | Open / Needs Discussion | Recommended interpretation is actual expected beneficiary repayments, but final implementation should confirm. |
+| OI-REQ-003 | Whether eligibility screening is in pilot scope. | Resolved — Out of Pilot | Eligibility screening, 90% mortgage comparison, employment evidence, and home price checks are handled offline. |
+| OI-REQ-004 | Report medium/platform is not specified. | Developer Decision | Developer may choose CLI/Web/Desktop and print-on-request report presentation. |
+| OI-REQ-005 | Rounding rules are not specified. | Developer Decision | Use decimal/fixed-point money and round stored/displayed values to cents. |
+| OI-REQ-006 | Weekly start/end business-day calendar. | Resolved by Project Decision | Use first/last business day excluding public holidays and foundation closure days. |

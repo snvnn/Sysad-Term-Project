@@ -42,21 +42,25 @@ Full index: [`docs/PROJECT_INDEX.md`](docs/PROJECT_INDEX.md)
 - [`docs/11-validation/test-strategy.md`](docs/11-validation/test-strategy.md)
 - [`docs/12-implementation/roadmap-and-wbs.md`](docs/12-implementation/roadmap-and-wbs.md)
 
-## Key Open Issues
+## Key Decisions Reflected
 
-- 주간 가용 자금 산식의 정확한 부호와 의미
-- “90% mortgage” 조건과 100% MSG Foundation mortgage의 관계
-- 신청 자격 심사가 파일럿 시스템 범위에 포함되는지 여부
-- 보고서 출력 형식
-- 금액 반올림 규칙
-- 주 시작/종료 기준일
+- 과제 범위는 **분석 및 설계 산출물**까지이며, 구현은 선택 사항이다.
+- 파일럿 시스템은 자격 심사, 90% 모기지 조건 판단, 고용 증거 확인, 주택 가격 검증을 직접 수행하지 않는다.
+- 핵심 관리 데이터는 투자 데이터, 운영 비용 데이터, 모기지 데이터로 제한한다.
+- 주간 가용 자금 산식은 `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`로 둔다.
+- 구현 플랫폼과 보고서 출력 방식은 개발자 재량으로 결정한다.
+- 데이터 입력 권한은 단순 관리자/승인 운영 담당자 중심 모델을 기본으로 한다.
+- 금액은 decimal/fixed-point로 계산하고 저장/표시 시 센트 단위로 반올림한다.
+- 주간 기준은 공휴일과 재단 휴업일을 제외한 첫/마지막 영업일로 둔다.
+
+## Remaining Open Issue
+
+- `expected mortgage repayments`가 수혜자 실제 예상 상환액인지, 보조금 지급 전 전체 P&I+에스크로 총액인지는 출처가 명확하지 않으므로 최종 구현 전 추가 논의가 필요하다. 현재 권장 해석은 수혜자 실제 예상 상환액 기준이다.
 
 ## Suggested Next Step
 
-구현 단계로 넘어가기 전 다음 결정을 확정해야 한다.
+공식 제출 전 다음을 확인한다.
 
-1. 구현 플랫폼: CLI / Web / Desktop
-2. 주간 가용 자금 산식
-3. 금액 반올림 정책
-4. 보고서 출력 형식
-5. 신청 자격 심사 범위
+1. Q-008 `expected mortgage repayments` 합산 범위 최종 확인
+2. 문서 산출물 간 산식/용어 일관성 리뷰
+3. 제출 형식에 맞춘 최종 기술 문서 패키징
