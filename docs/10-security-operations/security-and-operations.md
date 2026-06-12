@@ -20,8 +20,8 @@ The pilot system handles financial-like operational data, mortgage customer name
 
 ### Minimum Pilot Recommendation
 
-- Single-user local mode: OS-level access plus application password optional.
-- Multi-user mode: username/password with role-based access control.
+- Single-user or simple `Admin`/`Manager` mode is the default pilot recommendation.
+- If implemented as multi-user mode, use username/password with role-based access control.
 
 ### Authorization Rules
 
@@ -104,13 +104,13 @@ Pilot-level monitoring:
 ## 8. Configuration Principles
 
 - Formula version should be explicit.
-- Week start day should be configurable after policy confirmation.
+- Week start/end should use the project business-day rule: first/last business day excluding public holidays and foundation closure days.
 - Rounding mode should be configured and documented.
 - Secrets must not be committed to GitHub.
 
 ## 9. Operational Open Issues
 
-- Whether the pilot is single-user or multi-user.
-- Whether reports need export to PDF/CSV.
 - Backup location and retention period.
 - Whether sample data is allowed in repository.
+
+The former open issues about single-user vs multi-user mode and PDF/CSV export are now treated as developer decisions: use a simple `Admin`/`Manager` pilot access model by default, and keep report output format implementation-flexible as long as print-on-request is supported.

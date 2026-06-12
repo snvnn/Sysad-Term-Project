@@ -142,6 +142,6 @@ sequenceDiagram
 
 | Risk | Mitigation |
 |---|---|
-| Core formula ambiguity | Keep formula isolated and testable; document formula version. |
+| Expected mortgage repayment scope ambiguity | Keep repayment-scope interpretation visible in reports/contracts until final domain confirmation. |
 | Overbuilding pilot | Defer eligibility and external integrations. |
 | Inexperienced users | Prefer report-first UI and simple navigation. |

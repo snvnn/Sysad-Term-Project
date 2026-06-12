@@ -144,7 +144,7 @@ Columns:
 |  Expected Grants:     $  5,000.00                          |
 |                                                            |
 | Warnings                                                   |
-|  ! Formula draft-v1 requires confirmation                  |
+|  ! Expected mortgage repayments scope needs discussion     |
 |  ! 2 mortgage income records older than 90 days            |
 |                                                            |
 | Reports: [Weekly Funds] [Investments] [Mortgages]          |
@@ -159,7 +159,7 @@ Columns:
 | No operating expense | Operating expense estimate is missing. | Add current estimate. |
 | No mortgages | No active mortgages found. | Report can still run with zero mortgage totals. |
 | Stale data | Some input data may be stale. | Review updated dates. |
-| Formula unconfirmed | Available amount formula requires confirmation. | Continue with draft formula only if allowed. |
+| Repayment scope open | Expected mortgage repayments interpretation requires final confirmation. | Continue with recommended beneficiary-paid interpretation and visible warning. |
 
 ## 10. Accessibility Notes
 
