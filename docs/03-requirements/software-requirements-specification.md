@@ -50,31 +50,31 @@
 | NFR-007 | 확장성 | Should | 추후 신청 심사, 문서 관리, 외부 연동으로 확장 가능한 구조여야 한다. |
 | NFR-008 | 가용성 | Could | 파일럿은 업무 시간 중 사용 가능하면 충분하며 고가용성은 필수 아님. |
 
-## 4. Data Requirements
+## 4. 데이터 요구사항
 
-| ID | Data Object | Fields |
+| ID | 데이터 객체 | 필드 |
 |---|---|---|
-| DR-001 | Investment | item number, item name, estimated annual return, return last updated date |
-| DR-002 | Operating Expense | estimated annual operating expenses, expenses last updated date |
-| DR-003 | Mortgage | account number, mortgagees last name, original purchase price, issue date, weekly P&I, current weekly gross income, income updated date, annual tax, tax updated date, annual insurance premium, insurance updated date |
-| DR-004 | Weekly Computation | week start date, weekly investment income, weekly operating expense, expected mortgage repayment, expected grants, starting available amount, remaining available amount |
-| DR-005 | Fund Allocation | week start date, mortgage/account or application reference, home cost, approved/fundable flag, amount deducted |
+| DR-001 | 투자 항목 | 항목 번호, 항목명, 예상 연간 수익, 수익 정보 최종 갱신일 |
+| DR-002 | 운영 비용 | 예상 연간 운영 비용, 비용 정보 최종 갱신일 |
+| DR-003 | 모기지 | 계좌 번호, 모기지 수혜자 성, 원 구매가, 발행일, 주간 원리금(P&I), 현재 주간 총소득, 소득 정보 갱신일, 연간 세금, 세금 정보 갱신일, 연간 보험료, 보험 정보 갱신일 |
+| DR-004 | 주간 계산 | 주 시작일, 주간 투자 수입, 주간 운영 비용, 예상 모기지 상환액, 예상 보조금, 시작 가용 금액, 잔여 가용 금액 |
+| DR-005 | 자금 배정 | 주 시작일, 모기지/계좌 또는 신청 참조값, 주택 비용, 승인/자금 지원 가능 여부, 차감 금액 |
 
-## 5. Business Rules
+## 5. 비즈니스 규칙
 
-| ID | Rule |
+| ID | 규칙 |
 |---|---|
-| BR-001 | Weekly investment income = sum(estimated annual return of all investments) / 52, rounded to cents for stored/displayed values. |
-| BR-002 | Weekly operating expense = estimated annual operating expenses / 52, rounded to cents for stored/displayed values. |
-| BR-003 | Weekly escrow payment = (annual real-estate tax + annual homeowner insurance premium) / 52; taxes and insurance remain separate source fields but are aggregated for weekly calculation. |
-| BR-004 | Total weekly mortgage cost = weekly P&I + weekly escrow. |
-| BR-005 | Couple weekly affordability cap = current combined gross weekly income * 28%. |
-| BR-006 | Weekly grant = max(0, total weekly mortgage cost - affordability cap). |
-| BR-007 | Expected mortgage repayments = sum of active mortgage expected beneficiary weekly repayments, where each expected beneficiary weekly repayment = total weekly mortgage cost - weekly grant = min(total weekly mortgage cost, affordability cap). |
-| BR-008 | Starting available amount = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants. |
-| BR-009 | A new home purchase is fundable within the current week if home cost <= remaining available mortgage amount. |
-| BR-010 | When a home purchase is funded, remaining weekly available amount decreases by home cost. |
-| BR-011 | Week start is the first business day of the week; week end is the last business day, excluding public holidays and foundation closure days. |
+| BR-001 | 주간 투자 수입 = 모든 투자 항목의 예상 연간 수익 합계 / 52이며, 저장/표시 값은 센트 단위로 반올림한다. |
+| BR-002 | 주간 운영 비용 = 예상 연간 운영 비용 / 52이며, 저장/표시 값은 센트 단위로 반올림한다. |
+| BR-003 | 주간 에스크로 지불액 = (연간 부동산세 + 연간 주택 소유자 보험료) / 52이다. 세금과 보험료는 원천 필드로는 분리해 보존하지만, 주간 계산에서는 합산한다. |
+| BR-004 | 총 주간 모기지 비용 = 주간 원리금(P&I) + 주간 에스크로 지불액이다. |
+| BR-005 | 부부의 주간 부담 가능 한도 = 현재 합산 주간 총소득 * 28%이다. |
+| BR-006 | 주간 보조금 = `max(0, total weekly mortgage cost - affordability cap)`이다. |
+| BR-007 | 예상 모기지 상환액 = 활성 모기지별 예상 수혜자 주간 상환액의 합이다. 각 예상 수혜자 주간 상환액은 `total weekly mortgage cost - weekly grant = min(total weekly mortgage cost, affordability cap)`으로 계산한다. |
+| BR-008 | 시작 가용 금액 = `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`이다. |
+| BR-009 | 주택 비용이 잔여 가용 모기지 금액 이하이면 해당 주의 신규 주택 구매 자금 지원이 가능하다. |
+| BR-010 | 주택 구매 자금이 지원되면 잔여 주간 가용 금액은 주택 비용만큼 감소한다. |
+| BR-011 | 주 시작일은 해당 주의 첫 영업일이고, 주 종료일은 해당 주의 마지막 영업일이다. 공휴일과 재단 휴업일은 제외한다. |
 
 ## 6. Decisions and Former Open Issues
 

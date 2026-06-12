@@ -60,21 +60,21 @@ erDiagram
     MORTGAGE ||--o{ FUND_ALLOCATION : may_reference
 ```
 
-## 4. Business Rules
+## 4. 비즈니스 규칙
 
-| ID | Rule | Notes |
+| ID | 규칙 | 비고 |
 |---|---|---|
-| BR-001 | Weekly investment income is annual investment return divided by 52 and rounded to cents for stored/displayed values. | Sum across investments. |
-| BR-002 | Weekly operating expense is annual operating expense divided by 52 and rounded to cents for stored/displayed values. | Use active/latest estimate. |
-| BR-003 | Weekly escrow is annual real-estate tax plus annual insurance premium divided by 52. | Keep tax/insurance as separate source fields; aggregate for weekly calculation. |
-| BR-004 | Total weekly mortgage cost is weekly P&I plus weekly escrow. | Per mortgage. |
-| BR-005 | Couple affordability cap is 28% of current combined gross weekly income. | Per mortgage. |
-| BR-006 | Weekly grant is the positive difference between total weekly mortgage cost and affordability cap. | Never negative. |
-| BR-007 | Expected mortgage repayments = sum of active mortgage expected beneficiary weekly repayments. | Q-008 resolved. Per mortgage, expected beneficiary weekly repayment = total weekly mortgage cost - weekly grant = min(total weekly mortgage cost, affordability cap). |
-| BR-008 | Starting available amount = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants. | Q-001 resolved. |
-| BR-009 | A home purchase can be funded if its cost is not greater than remaining weekly available amount. | Pilot-level fundability. |
-| BR-010 | Funding a home purchase reduces remaining weekly available amount by the home cost. | During that week. |
-| BR-011 | Week start is the first business day and week end is the last business day, excluding public holidays and foundation closure days. | Q-007 resolved. |
+| BR-001 | 주간 투자 수입은 연간 투자 수익을 52로 나눈 값이며, 저장/표시 값은 센트 단위로 반올림한다. | 모든 투자 항목을 합산한다. |
+| BR-002 | 주간 운영 비용은 연간 운영 비용을 52로 나눈 값이며, 저장/표시 값은 센트 단위로 반올림한다. | 활성/최신 추정치를 사용한다. |
+| BR-003 | 주간 에스크로 지불액은 연간 부동산세와 연간 보험료의 합을 52로 나눈 값이다. | 세금/보험료는 원천 필드로 분리 보존하되, 주간 계산에서는 합산한다. |
+| BR-004 | 총 주간 모기지 비용은 주간 원리금(P&I)과 주간 에스크로 지불액의 합이다. | 모기지별로 계산한다. |
+| BR-005 | 부부 부담 가능 한도는 현재 합산 주간 총소득의 28%이다. | 모기지별로 계산한다. |
+| BR-006 | 주간 보조금은 총 주간 모기지 비용이 부담 가능 한도를 초과하는 양수 차액이다. | 음수가 될 수 없다. |
+| BR-007 | 예상 모기지 상환액은 활성 모기지별 예상 수혜자 주간 상환액의 합이다. | Q-008 확정. 모기지별 예상 수혜자 주간 상환액 = `total weekly mortgage cost - weekly grant = min(total weekly mortgage cost, affordability cap)`. |
+| BR-008 | 시작 가용 금액 = `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`이다. | Q-001 확정. |
+| BR-009 | 주택 비용이 잔여 주간 가용 금액 이하이면 해당 주택 구매 자금 지원이 가능하다. | 파일럿 수준의 자금 지원 가능성 판단이다. |
+| BR-010 | 주택 구매 자금 지원이 이루어지면 잔여 주간 가용 금액은 주택 비용만큼 감소한다. | 해당 주 안에서 적용한다. |
+| BR-011 | 주 시작일은 첫 영업일이고 주 종료일은 마지막 영업일이다. 공휴일과 재단 휴업일은 제외한다. | Q-007 확정. |
 
 ## 5. Mortgage Calculation Example Shape
 
