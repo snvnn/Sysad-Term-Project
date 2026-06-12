@@ -39,6 +39,10 @@
 
 - [API and interface contract](07-interfaces/api-contract.md)
 
+## 07. Design
+
+- [Operation contracts](07-design/operation-contracts.md)
+
 ## 08. Data
 
 - [Data model and schema design](08-data/data-model.md)

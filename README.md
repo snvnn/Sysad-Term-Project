@@ -39,6 +39,7 @@ Full index: [`docs/PROJECT_INDEX.md`](docs/PROJECT_INDEX.md)
 
 - [`docs/06-architecture/architecture-design.md`](docs/06-architecture/architecture-design.md)
 - [`docs/07-interfaces/api-contract.md`](docs/07-interfaces/api-contract.md)
+- [`docs/07-design/operation-contracts.md`](docs/07-design/operation-contracts.md)
 - [`docs/08-data/data-model.md`](docs/08-data/data-model.md)
 - [`docs/09-ui/report-specification.md`](docs/09-ui/report-specification.md)
 - [`docs/10-security-operations/security-and-operations.md`](docs/10-security-operations/security-and-operations.md)

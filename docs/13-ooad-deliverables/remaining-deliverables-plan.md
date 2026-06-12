@@ -110,7 +110,9 @@ Verification:
 
 ### Step 3. Operation Contracts
 
-Target file:
+Status: `Completed`
+
+Output file:
 
 ```text
 docs/07-design/operation-contracts.md
