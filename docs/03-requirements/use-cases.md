@@ -4,6 +4,12 @@
 
 이 문서는 MSG Foundation 파일럿 시스템의 요구사항 분석 산출물로, 시스템 도입 이후 누가 어떤 목적으로 시스템을 사용하는지 brief use case 스타일로 정의한다.
 
+Draw.io file:
+
+```text
+docs/03-requirements/use-case-diagram.drawio
+```
+
 ## 2. Scope Notes
 
 - Rich Picture는 사용자가 수기로 작성한다.

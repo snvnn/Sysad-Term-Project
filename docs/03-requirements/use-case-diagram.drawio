@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" modified="2026-06-12T00:00:00.000Z" agent="Codex" version="30.0.4" type="device">
+  <diagram id="use-case-diagram" name="Use Case Diagram">
+<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="760" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="title" value="MSG Foundation Pilot System - Use Case Diagram" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="40" y="16" width="820" height="30" as="geometry"/>
+    </mxCell>
+    <mxCell id="boundary" value="MSG Foundation Pilot System" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=8;" vertex="1" parent="1">
+      <mxGeometry x="250" y="50" width="600" height="650" as="geometry"/>
+    </mxCell>
+    <mxCell id="actor_manager" value="Foundation&#xa;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="70" y="100" width="45" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="actor_mortgage" value="Mortgage Program&#xa;Officer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="60" y="455" width="65" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="actor_investment" value="Investment&#xa;Advisor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="965" y="105" width="55" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="actor_trustees" value="Trustees /&#xa;Board" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="965" y="455" width="55" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc1" value="UC-001&#xa;Manage Investments" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="395" y="85" width="310" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc2" value="UC-002&#xa;Manage Operating Expense Estimate" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="365" y="150" width="370" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc3" value="UC-003&#xa;Manage Mortgages" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="395" y="215" width="310" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc4" value="UC-004&#xa;Run Weekly Funds Computation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="365" y="280" width="370" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc5" value="UC-005&#xa;Check Home Fundability" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="395" y="345" width="310" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc6" value="UC-006&#xa;Record Fund Allocation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="395" y="410" width="310" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc7" value="UC-007&#xa;Generate Weekly Funds Report" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="365" y="475" width="370" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc8" value="UC-008&#xa;Generate Investment Listing" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="395" y="540" width="310" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc9" value="UC-009&#xa;Generate Mortgage Listing" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="395" y="605" width="310" height="48" as="geometry"/>
+    </mxCell>
+    <mxCell id="note" value="Out of pilot: applicant eligibility, 90% commercial mortgage comparison, employment evidence, home price verification, and applicant document management." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="270" y="665" width="560" height="52" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_manager_uc1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_manager" target="uc1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_manager_uc2" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_manager" target="uc2">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_manager_uc4" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_manager" target="uc4">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_manager_uc5" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_manager" target="uc5">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_manager_uc6" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_manager" target="uc6">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_manager_uc7" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_manager" target="uc7">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_manager_uc8" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_manager" target="uc8">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_manager_uc9" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_manager" target="uc9">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_mortgage_uc3" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_mortgage" target="uc3">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_mortgage_uc9" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_mortgage" target="uc9">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_investment_uc1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_investment" target="uc1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_investment_uc8" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_investment" target="uc8">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_trustees_uc7" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_trustees" target="uc7">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_trustees_uc8" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_trustees" target="uc8">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_trustees_uc9" style="endArrow=none;html=1;rounded=0;strokeWidth=1.1;" edge="1" parent="1" source="actor_trustees" target="uc9">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>
+  </diagram>
+</mxfile>

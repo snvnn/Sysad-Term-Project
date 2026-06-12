@@ -20,6 +20,7 @@
 - [Software requirements specification](03-requirements/software-requirements-specification.md)
 - [Requirements traceability matrix](03-requirements/requirements-traceability-matrix.md)
 - [Brief use cases](03-requirements/use-cases.md)
+- [Use case diagram draw.io](03-requirements/use-case-diagram.drawio)
 - [System sequence diagrams](03-requirements/system-sequence-diagrams.md)
 - [System sequence diagrams draw.io](03-requirements/system-sequence-diagrams.drawio)
 
