@@ -1,340 +1,1379 @@
 <mxfile host="app.diagrams.net" modified="2026-06-12T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
-<diagram id="dsd-001" name="DSD-001 Create Investment">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="760" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-001 Create Investment" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1160" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-001 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1160" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="910" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation
-Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="200" y="100" width="120" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="260" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="service" value="InvestmentService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="390" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="475" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="repo" value="InvestmentRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="660" y="100" width="190" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="755" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="entity" value="Investment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="960" y="100" width="150" height="46" as="geometry"/></mxCell>
-    <mxCell id="entity_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1035" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. submit investment data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="260" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. createInvestment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="274" as="sourcePoint"/><mxPoint x="475" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. check item number" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="328" as="sourcePoint"/><mxPoint x="755" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. create Investment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="382" as="sourcePoint"/><mxPoint x="1035" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. save investment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="436" as="sourcePoint"/><mxPoint x="755" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. confirm saved" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="490" as="sourcePoint"/><mxPoint x="260" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-001 / OC-001 / FR-001. Investment Advisor may provide values; Foundation Manager is the default data-entry actor." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="588" width="1120" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-002" name="DSD-002 Update Investment Return">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="760" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-002 Update Investment Return" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1160" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-002 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1160" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="910" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation
-Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="200" y="100" width="120" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="260" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="service" value="InvestmentService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="390" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="475" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="repo" value="InvestmentRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="660" y="100" width="190" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="755" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="entity" value="Investment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="960" y="100" width="150" height="46" as="geometry"/></mxCell>
-    <mxCell id="entity_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1035" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. submit return update" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="260" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. updateInvestmentReturn" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="274" as="sourcePoint"/><mxPoint x="475" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. find investment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="328" as="sourcePoint"/><mxPoint x="755" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. update return and date" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="382" as="sourcePoint"/><mxPoint x="1035" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. save investment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="436" as="sourcePoint"/><mxPoint x="755" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. confirm updated" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="490" as="sourcePoint"/><mxPoint x="260" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-001 / OC-002 / FR-001, FR-004. Existing finalized WeeklyComputation snapshots are preserved." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="588" width="1120" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-003" name="DSD-003 Update Operating Expense Estimate">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="760" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-003 Update Operating Expense Estimate" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1240" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-003 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1240" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="990" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation
-Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="200" y="100" width="120" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="260" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="service" value="OperatingExpenseService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="380" y="100" width="220" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="490" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="repo" value="OperatingExpenseRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="690" y="100" width="230" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="805" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="entity" value="OperatingExpenseEstimate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="1010" y="100" width="230" height="46" as="geometry"/></mxCell>
-    <mxCell id="entity_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1125" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. submit expense estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="260" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. updateOperatingExpenseEstimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="274" as="sourcePoint"/><mxPoint x="490" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. find active estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="490" y="328" as="sourcePoint"/><mxPoint x="805" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. create or activate estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="490" y="382" as="sourcePoint"/><mxPoint x="1125" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. save active estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="490" y="436" as="sourcePoint"/><mxPoint x="805" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. confirm updated" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="490" y="490" as="sourcePoint"/><mxPoint x="260" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-002 / OC-003 / FR-002, FR-005. Future computations use the latest active estimate; finalized snapshots stay unchanged." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="588" width="1200" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-004" name="DSD-004 Create Mortgage">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="780" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-004 Create Mortgage" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1160" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-004 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1160" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="910" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Mortgage Program
-Officer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="200" y="100" width="120" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="260" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="service" value="MortgageService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="400" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="485" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="repo" value="MortgageRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="660" y="100" width="190" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="755" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="entity" value="Mortgage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="960" y="100" width="150" height="46" as="geometry"/></mxCell>
-    <mxCell id="entity_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1035" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. submit mortgage data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="260" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. createMortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="274" as="sourcePoint"/><mxPoint x="485" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. check account number" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="485" y="328" as="sourcePoint"/><mxPoint x="755" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. create Mortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="485" y="382" as="sourcePoint"/><mxPoint x="1035" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. save mortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="485" y="436" as="sourcePoint"/><mxPoint x="755" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. confirm mortgage saved" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="485" y="490" as="sourcePoint"/><mxPoint x="260" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-003 / OC-004 / FR-003, FR-006~FR-009. Eligibility screening and 90% mortgage comparison stay outside the pilot." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="588" width="1120" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-005" name="DSD-005 Update Mortgage Income">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1360" pageHeight="820" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-005 Update Mortgage Income" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1280" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-005 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1280" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="1030" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Mortgage Program
-Officer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="200" y="100" width="120" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="260" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="service" value="MortgageService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="390" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="475" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="repo" value="MortgageRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="640" y="100" width="190" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="735" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="entity" value="Mortgage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="900" y="100" width="150" height="46" as="geometry"/></mxCell>
-    <mxCell id="entity_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="975" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="calc" value="MortgageCalculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="1110" y="100" width="180" height="46" as="geometry"/></mxCell>
-    <mxCell id="calc_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1200" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. submit income update" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="260" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. updateMortgageIncome" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="274" as="sourcePoint"/><mxPoint x="475" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. find mortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="328" as="sourcePoint"/><mxPoint x="735" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. update income and date" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="382" as="sourcePoint"/><mxPoint x="975" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. preview cap and grant" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="436" as="sourcePoint"/><mxPoint x="1200" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. save mortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="490" as="sourcePoint"/><mxPoint x="735" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m7" value="7. confirm updated" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="475" y="544" as="sourcePoint"/><mxPoint x="260" y="544" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-003 / OC-005 / FR-003, FR-008, FR-009. Updated income affects future affordability cap and grant calculations." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="642" width="1240" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-006" name="DSD-006 Run Weekly Computation">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1780" pageHeight="920" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-006 Run Weekly Computation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1700" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-006 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1700" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="1450" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation
-Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="50" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="72" y="165" width="1" height="605" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="160" y="100" width="100" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="210" y="165" width="1" height="605" as="geometry"/></mxCell>
-    <mxCell id="service" value="WeeklyComputationService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="310" y="100" width="220" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="420" y="165" width="1" height="605" as="geometry"/></mxCell>
-    <mxCell id="inv" value="InvestmentRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="590" y="100" width="180" height="46" as="geometry"/></mxCell>
-    <mxCell id="inv_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="680" y="165" width="1" height="605" as="geometry"/></mxCell>
-    <mxCell id="exp" value="ExpenseRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="820" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="exp_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="905" y="165" width="1" height="605" as="geometry"/></mxCell>
-    <mxCell id="mtg" value="MortgageRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="1040" y="100" width="180" height="46" as="geometry"/></mxCell>
-    <mxCell id="mtg_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1130" y="165" width="1" height="605" as="geometry"/></mxCell>
-    <mxCell id="funds" value="FundsAvailabilityCalculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="1280" y="100" width="230" height="46" as="geometry"/></mxCell>
-    <mxCell id="funds_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1395" y="165" width="1" height="605" as="geometry"/></mxCell>
-    <mxCell id="mcalc" value="MortgageCalculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="1560" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="mcalc_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1645" y="165" width="1" height="605" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request weekly computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="72" y="220" as="sourcePoint"/><mxPoint x="210" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. runWeeklyComputation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="210" y="278" as="sourcePoint"/><mxPoint x="420" y="278" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. load active investments" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="420" y="336" as="sourcePoint"/><mxPoint x="680" y="336" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. load active expense estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="420" y="394" as="sourcePoint"/><mxPoint x="905" y="394" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. load active mortgages" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="420" y="452" as="sourcePoint"/><mxPoint x="1130" y="452" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. calculate weekly funds" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="420" y="510" as="sourcePoint"/><mxPoint x="1395" y="510" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m7" value="7. per-mortgage cost/grant/repayment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1395" y="568" as="sourcePoint"/><mxPoint x="1645" y="568" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m8" value="8. calculate starting available amount" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1395" y="626" as="sourcePoint"/><Array as="points"><mxPoint x="1490" y="626"/><mxPoint x="1490" y="660"/></Array><mxPoint x="1395" y="660" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m9" value="9. create snapshots and warnings" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="420" y="684" as="sourcePoint"/><Array as="points"><mxPoint x="515" y="684"/><mxPoint x="515" y="718"/></Array><mxPoint x="420" y="718" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m10" value="10. return computation result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="420" y="742" as="sourcePoint"/><mxPoint x="210" y="742" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-004 / OC-006 / FR-004~FR-012. Q-008: repayments are beneficiary-paid weekly repayments for active mortgages." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="844" width="1660" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-007" name="DSD-007 Check Home Fundability">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="760" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-007 Check Home Fundability" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1240" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-007 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1240" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="990" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation
-Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="200" y="100" width="120" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="260" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="service" value="FundingService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="400" y="100" width="160" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="480" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="repo" value="WeeklyComputationRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="640" y="100" width="250" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="765" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="comp" value="WeeklyComputation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="980" y="100" width="200" height="46" as="geometry"/></mxCell>
-    <mxCell id="comp_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1080" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request fundability check" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="260" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. checkHomeFundability" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="274" as="sourcePoint"/><mxPoint x="480" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. load computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="480" y="328" as="sourcePoint"/><mxPoint x="765" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. canFund(homeCost)" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="480" y="382" as="sourcePoint"/><mxPoint x="1080" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. return fundability result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="480" y="436" as="sourcePoint"/><mxPoint x="260" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-005 / OC-007 / FR-013. This check does not create allocation or change remaining funds." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="534" width="1200" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-008" name="DSD-008 Record Fund Allocation">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1480" pageHeight="860" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-008 Record Fund Allocation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1400" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-008 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1400" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="1150" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation
-Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="545" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="190" y="100" width="110" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="245" y="165" width="1" height="545" as="geometry"/></mxCell>
-    <mxCell id="service" value="FundingService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="370" y="100" width="160" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="450" y="165" width="1" height="545" as="geometry"/></mxCell>
-    <mxCell id="repo" value="WeeklyComputationRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="610" y="100" width="250" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="735" y="165" width="1" height="545" as="geometry"/></mxCell>
-    <mxCell id="comp" value="WeeklyComputation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="940" y="100" width="200" height="46" as="geometry"/></mxCell>
-    <mxCell id="comp_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1040" y="165" width="1" height="545" as="geometry"/></mxCell>
-    <mxCell id="alloc" value="FundAllocationRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="1190" y="100" width="220" height="46" as="geometry"/></mxCell>
-    <mxCell id="alloc_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1300" y="165" width="1" height="545" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request record allocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="245" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. recordFundAllocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="245" y="274" as="sourcePoint"/><mxPoint x="450" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. find computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="328" as="sourcePoint"/><mxPoint x="735" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. canFund(homeCost)" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="382" as="sourcePoint"/><mxPoint x="1040" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. create FundAllocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="436" as="sourcePoint"/><mxPoint x="1300" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. apply allocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="490" as="sourcePoint"/><mxPoint x="1040" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m7" value="7. save computation and allocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="544" as="sourcePoint"/><mxPoint x="735" y="544" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m8" value="8. confirm remaining amount" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="450" y="598" as="sourcePoint"/><mxPoint x="245" y="598" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-006 / OC-008 / FR-014. Allocation reduces WeeklyComputation.remainingAvailableAmount and appears in the weekly report." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="696" width="1360" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-009" name="DSD-009 Generate Weekly Funds Report">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="780" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-009 Generate Weekly Funds Report" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1200" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-009 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1200" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="950" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation Manager
-/ Trustees" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="200" y="100" width="120" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="260" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="service" value="ReportService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="390" y="100" width="160" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="470" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="repo" value="WeeklyComputationRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="620" y="100" width="260" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="750" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="renderer" value="ReportRenderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="980" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="renderer_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1065" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request weekly funds report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="260" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. generateWeeklyFundsReport" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="274" as="sourcePoint"/><mxPoint x="470" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. load computation + snapshots" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="470" y="328" as="sourcePoint"/><mxPoint x="750" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. build view model with warnings" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="470" y="382" as="sourcePoint"/><Array as="points"><mxPoint x="565" y="382"/><mxPoint x="565" y="416"/></Array><mxPoint x="470" y="416" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. render printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="470" y="436" as="sourcePoint"/><mxPoint x="1065" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. return printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="470" y="490" as="sourcePoint"/><mxPoint x="260" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-007 / OC-009 / FR-015. Report includes snapshots, expected repayments/grants, allocations, remaining amount, and warnings." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="588" width="1160" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-010" name="DSD-010 Generate Investment Listing Report">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="780" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-010 Generate Investment Listing Report" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1200" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-010 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1200" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="950" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation Manager
-/ Trustees" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="200" y="100" width="120" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="260" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="service" value="ReportService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="390" y="100" width="160" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="470" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="repo" value="InvestmentRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="650" y="100" width="200" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="750" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="renderer" value="ReportRenderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="980" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="renderer_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1065" y="165" width="1" height="465" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request investment listing" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="260" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. generateInvestmentListing" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="260" y="274" as="sourcePoint"/><mxPoint x="470" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. find all investments" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="470" y="328" as="sourcePoint"/><mxPoint x="750" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. build listing view" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="470" y="382" as="sourcePoint"/><Array as="points"><mxPoint x="565" y="382"/><mxPoint x="565" y="416"/></Array><mxPoint x="470" y="416" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. render printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="470" y="436" as="sourcePoint"/><mxPoint x="1065" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. return report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="470" y="490" as="sourcePoint"/><mxPoint x="260" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-008 / OC-010 / FR-016. Report includes item number, item name, estimated annual return, and return last updated date." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="588" width="1160" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="dsd-011" name="DSD-011 Generate Mortgage Listing Report">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1380" pageHeight="820" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="DSD-011 Generate Mortgage Listing Report" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="1300" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="OC-011 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="1300" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="1050" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation Manager
-/ Trustees" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="82" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="190" y="100" width="110" height="46" as="geometry"/></mxCell>
-    <mxCell id="ui_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="245" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="service" value="ReportService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="360" y="100" width="150" height="46" as="geometry"/></mxCell>
-    <mxCell id="service_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="435" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="repo" value="MortgageRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="590" y="100" width="180" height="46" as="geometry"/></mxCell>
-    <mxCell id="repo_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="680" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="calc" value="MortgageCalculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="840" y="100" width="180" height="46" as="geometry"/></mxCell>
-    <mxCell id="calc_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="930" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="renderer" value="ReportRenderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="1110" y="100" width="170" height="46" as="geometry"/></mxCell>
-    <mxCell id="renderer_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="1195" y="165" width="1" height="505" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request mortgage listing" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="82" y="220" as="sourcePoint"/><mxPoint x="245" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. generateMortgageListing" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="245" y="274" as="sourcePoint"/><mxPoint x="435" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. find all mortgages" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="435" y="328" as="sourcePoint"/><mxPoint x="680" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. calculate weekly grant" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="435" y="382" as="sourcePoint"/><mxPoint x="930" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. apply report-view authorization" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="435" y="436" as="sourcePoint"/><Array as="points"><mxPoint x="530" y="436"/><mxPoint x="530" y="470"/></Array><mxPoint x="435" y="470" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. render printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="435" y="490" as="sourcePoint"/><mxPoint x="1195" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m7" value="7. return report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="435" y="544" as="sourcePoint"/><mxPoint x="245" y="544" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="UC-009 / OC-011 / FR-017. Report includes mortgage details, update dates, and estimated weekly grant; income fields are role-filtered." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="642" width="1260" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
+  <diagram id="dsd-001" name="DSD-001 Create Investment">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-001 Create Investment" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-001 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="910" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation&lt;br&gt;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="165" as="sourcePoint" />
+            <mxPoint x="260" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="InvestmentService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="390" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="165" as="sourcePoint" />
+            <mxPoint x="475" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="InvestmentRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="660" y="100" width="190" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="755" y="165" as="sourcePoint" />
+            <mxPoint x="755" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="entity" value="Investment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="960" y="100" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1035" y="165" as="sourcePoint" />
+            <mxPoint x="1035" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-001" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-001" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="467" y="256" width="16" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-001" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="747" y="310" width="16" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_act_dsd-001" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1027" y="364" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. submit investment data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="260" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. createInvestment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="274" as="sourcePoint" />
+            <mxPoint x="475" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. check item number" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="328" as="sourcePoint" />
+            <mxPoint x="755" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. create Investment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="382" as="sourcePoint" />
+            <mxPoint x="1035" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. save investment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="436" as="sourcePoint" />
+            <mxPoint x="755" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. confirm saved" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="490" as="sourcePoint" />
+            <mxPoint x="260" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-001 / OC-001 / FR-001. Investment Advisor may provide values; Foundation Manager is the default data-entry actor." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="588" width="1120" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-002" name="DSD-002 Update Investment Return">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-002 Update Investment Return" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-002 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="910" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation&lt;br&gt;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="165" as="sourcePoint" />
+            <mxPoint x="260" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="InvestmentService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="390" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="165" as="sourcePoint" />
+            <mxPoint x="475" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="InvestmentRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="660" y="100" width="190" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="755" y="165" as="sourcePoint" />
+            <mxPoint x="755" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="entity" value="Investment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="960" y="100" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1035" y="165" as="sourcePoint" />
+            <mxPoint x="1035" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-002" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-002" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="467" y="256" width="16" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-002" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="747" y="310" width="16" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_act_dsd-002" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1027" y="364" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. submit return update" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="260" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. updateInvestmentReturn" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="274" as="sourcePoint" />
+            <mxPoint x="475" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. find investment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="328" as="sourcePoint" />
+            <mxPoint x="755" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. update return and date" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="382" as="sourcePoint" />
+            <mxPoint x="1035" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. save investment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="436" as="sourcePoint" />
+            <mxPoint x="755" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. confirm updated" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="490" as="sourcePoint" />
+            <mxPoint x="260" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-001 / OC-002 / FR-001, FR-004. Existing finalized WeeklyComputation snapshots are preserved." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="588" width="1120" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-003" name="DSD-003 Update Operating Expense Estimate">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-003 Update Operating Expense Estimate" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1240" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-003 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="990" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation&lt;br&gt;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="165" as="sourcePoint" />
+            <mxPoint x="260" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="OperatingExpenseService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="380" y="100" width="220" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="165" as="sourcePoint" />
+            <mxPoint x="490" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="OperatingExpenseRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="100" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="805" y="165" as="sourcePoint" />
+            <mxPoint x="805" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="entity" value="OperatingExpenseEstimate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="100" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1125" y="165" as="sourcePoint" />
+            <mxPoint x="1125" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-003" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-003" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="482" y="256" width="16" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-003" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="797" y="310" width="16" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_act_dsd-003" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1117" y="364" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. submit expense estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="260" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. updateOperatingExpenseEstimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="274" as="sourcePoint" />
+            <mxPoint x="490" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. find active estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="328" as="sourcePoint" />
+            <mxPoint x="805" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. create or activate estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="382" as="sourcePoint" />
+            <mxPoint x="1125" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. save active estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="436" as="sourcePoint" />
+            <mxPoint x="805" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. confirm updated" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="490" as="sourcePoint" />
+            <mxPoint x="260" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-002 / OC-003 / FR-002, FR-005. Future computations use the latest active estimate; finalized snapshots stay unchanged." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="588" width="1200" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-004" name="DSD-004 Create Mortgage">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-004 Create Mortgage" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-004 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="910" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Mortgage Program&lt;br&gt;Officer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="165" as="sourcePoint" />
+            <mxPoint x="260" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="MortgageService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="165" as="sourcePoint" />
+            <mxPoint x="485" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="MortgageRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="660" y="100" width="190" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="755" y="165" as="sourcePoint" />
+            <mxPoint x="755" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="entity" value="Mortgage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="960" y="100" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1035" y="165" as="sourcePoint" />
+            <mxPoint x="1035" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-004" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-004" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="477" y="256" width="16" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-004" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="747" y="310" width="16" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_act_dsd-004" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1027" y="364" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. submit mortgage data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="260" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. createMortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="274" as="sourcePoint" />
+            <mxPoint x="485" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. check account number" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="328" as="sourcePoint" />
+            <mxPoint x="755" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. create Mortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="382" as="sourcePoint" />
+            <mxPoint x="1035" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. save mortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="436" as="sourcePoint" />
+            <mxPoint x="755" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. confirm mortgage saved" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="490" as="sourcePoint" />
+            <mxPoint x="260" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-003 / OC-004 / FR-003, FR-006~FR-009. Eligibility screening and 90% mortgage comparison stay outside the pilot." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="588" width="1120" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-005" name="DSD-005 Update Mortgage Income">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1360" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-005 Update Mortgage Income" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1280" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-005 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Mortgage Program&lt;br&gt;Officer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="165" as="sourcePoint" />
+            <mxPoint x="260" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="MortgageService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="390" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="165" as="sourcePoint" />
+            <mxPoint x="475" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="MortgageRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="640" y="100" width="190" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="165" as="sourcePoint" />
+            <mxPoint x="735" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="entity" value="Mortgage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="900" y="100" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="975" y="165" as="sourcePoint" />
+            <mxPoint x="975" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="calc" value="MortgageCalculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="100" width="180" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="calc_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1200" y="165" as="sourcePoint" />
+            <mxPoint x="1200" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-005" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="202" width="16" height="366" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-005" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="467" y="256" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-005" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="727" y="310" width="16" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_act_dsd-005" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="967" y="364" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="calc_act_dsd-005" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1192" y="418" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. submit income update" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="260" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. updateMortgageIncome" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="274" as="sourcePoint" />
+            <mxPoint x="475" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. find mortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="328" as="sourcePoint" />
+            <mxPoint x="735" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. update income and date" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="382" as="sourcePoint" />
+            <mxPoint x="975" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. preview cap and grant" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="436" as="sourcePoint" />
+            <mxPoint x="1200" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. save mortgage" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="490" as="sourcePoint" />
+            <mxPoint x="735" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7. confirm updated" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="544" as="sourcePoint" />
+            <mxPoint x="260" y="544" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-003 / OC-005 / FR-003, FR-008, FR-009. Updated income affects future affordability cap and grant calculations." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="642" width="1240" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-006" name="DSD-006 Run Weekly Computation">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1780" pageHeight="920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-006 Run Weekly Computation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1700" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-006 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1700" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation&lt;br&gt;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="72" y="165" as="sourcePoint" />
+            <mxPoint x="72" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="160" y="100" width="100" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="165" as="sourcePoint" />
+            <mxPoint x="210" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="WeeklyComputationService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="310" y="100" width="220" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="165" as="sourcePoint" />
+            <mxPoint x="420" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inv" value="InvestmentRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="590" y="100" width="180" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="inv_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="165" as="sourcePoint" />
+            <mxPoint x="680" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="exp" value="ExpenseRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="820" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="exp_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="905" y="165" as="sourcePoint" />
+            <mxPoint x="905" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mtg" value="MortgageRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="100" width="180" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="mtg_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1130" y="165" as="sourcePoint" />
+            <mxPoint x="1130" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="funds" value="FundsAvailabilityCalculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="100" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="funds_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395" y="165" as="sourcePoint" />
+            <mxPoint x="1395" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mcalc" value="MortgageCalculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1560" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="mcalc_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1645" y="165" as="sourcePoint" />
+            <mxPoint x="1645" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-006" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="202" y="202" width="16" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-006" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="412" y="260" width="16" height="502" as="geometry" />
+        </mxCell>
+        <mxCell id="inv_act_dsd-006" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="672" y="318" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="exp_act_dsd-006" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="897" y="376" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="mtg_act_dsd-006" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1122" y="434" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="funds_act_dsd-006" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1387" y="492" width="16" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="mcalc_act_dsd-006" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1637" y="550" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request weekly computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="72" y="220" as="sourcePoint" />
+            <mxPoint x="210" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. runWeeklyComputation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="278" as="sourcePoint" />
+            <mxPoint x="420" y="278" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. load active investments" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="336" as="sourcePoint" />
+            <mxPoint x="680" y="336" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. load active expense estimate" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="394" as="sourcePoint" />
+            <mxPoint x="905" y="394" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. load active mortgages" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="452" as="sourcePoint" />
+            <mxPoint x="1130" y="452" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. calculate weekly funds" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="510" as="sourcePoint" />
+            <mxPoint x="1395" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7. per-mortgage cost/grant/repayment" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395" y="568" as="sourcePoint" />
+            <mxPoint x="1645" y="568" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="8. calculate starting available amount" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395" y="626" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1490" y="626" />
+              <mxPoint x="1490" y="660" />
+            </Array>
+            <mxPoint x="1395" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="9. create snapshots and warnings" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="684" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="515" y="684" />
+              <mxPoint x="515" y="718" />
+            </Array>
+            <mxPoint x="420" y="718" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="10. return computation result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="742" as="sourcePoint" />
+            <mxPoint x="210" y="742" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-004 / OC-006 / FR-004~FR-012. Q-008: repayments are beneficiary-paid weekly repayments for active mortgages." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="844" width="1660" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-007" name="DSD-007 Check Home Fundability">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-007 Check Home Fundability" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1240" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-007 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="990" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation&lt;br&gt;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="165" as="sourcePoint" />
+            <mxPoint x="260" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="FundingService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="160" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="165" as="sourcePoint" />
+            <mxPoint x="480" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="WeeklyComputationRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="640" y="100" width="250" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="765" y="165" as="sourcePoint" />
+            <mxPoint x="765" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp" value="WeeklyComputation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="980" y="100" width="200" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="165" as="sourcePoint" />
+            <mxPoint x="1080" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-007" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="202" width="16" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-007" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="472" y="256" width="16" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-007" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="757" y="310" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_act_dsd-007" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1072" y="364" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request fundability check" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="260" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. checkHomeFundability" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="274" as="sourcePoint" />
+            <mxPoint x="480" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. load computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="328" as="sourcePoint" />
+            <mxPoint x="765" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. canFund(homeCost)" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="382" as="sourcePoint" />
+            <mxPoint x="1080" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. return fundability result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="436" as="sourcePoint" />
+            <mxPoint x="260" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-005 / OC-007 / FR-013. This check does not create allocation or change remaining funds." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="534" width="1200" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-008" name="DSD-008 Record Fund Allocation">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1480" pageHeight="860" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-008 Record Fund Allocation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1400" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-008 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation&lt;br&gt;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="190" y="100" width="110" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="165" as="sourcePoint" />
+            <mxPoint x="245" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="FundingService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="370" y="100" width="160" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="165" as="sourcePoint" />
+            <mxPoint x="450" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="WeeklyComputationRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="610" y="100" width="250" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="165" as="sourcePoint" />
+            <mxPoint x="735" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp" value="WeeklyComputation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="940" y="100" width="200" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1040" y="165" as="sourcePoint" />
+            <mxPoint x="1040" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="alloc" value="FundAllocationRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="100" width="220" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="alloc_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1300" y="165" as="sourcePoint" />
+            <mxPoint x="1300" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-008" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="237" y="202" width="16" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-008" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="442" y="256" width="16" height="366" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-008" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="727" y="310" width="16" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_act_dsd-008" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1032" y="364" width="16" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="alloc_act_dsd-008" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1292" y="418" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request record allocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="245" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. recordFundAllocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="274" as="sourcePoint" />
+            <mxPoint x="450" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. find computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="328" as="sourcePoint" />
+            <mxPoint x="735" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. canFund(homeCost)" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="382" as="sourcePoint" />
+            <mxPoint x="1040" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. create FundAllocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="436" as="sourcePoint" />
+            <mxPoint x="1300" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. apply allocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="490" as="sourcePoint" />
+            <mxPoint x="1040" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7. save computation and allocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="544" as="sourcePoint" />
+            <mxPoint x="735" y="544" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="8. confirm remaining amount" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="598" as="sourcePoint" />
+            <mxPoint x="245" y="598" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-006 / OC-008 / FR-014. Allocation reduces WeeklyComputation.remainingAvailableAmount and appears in the weekly report." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="696" width="1360" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-009" name="DSD-009 Generate Weekly Funds Report">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-009 Generate Weekly Funds Report" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1200" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-009 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="950" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation Manager&lt;br&gt;/ Trustees" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="165" as="sourcePoint" />
+            <mxPoint x="260" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="ReportService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="390" y="100" width="160" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="165" as="sourcePoint" />
+            <mxPoint x="470" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="WeeklyComputationRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="100" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="165" as="sourcePoint" />
+            <mxPoint x="750" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="renderer" value="ReportRenderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="980" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="renderer_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1065" y="165" as="sourcePoint" />
+            <mxPoint x="1065" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-009" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-009" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="462" y="256" width="16" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-009" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="742" y="310" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="renderer_act_dsd-009" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1057" y="418" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request weekly funds report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="260" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. generateWeeklyFundsReport" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="274" as="sourcePoint" />
+            <mxPoint x="470" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. load computation + snapshots" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="328" as="sourcePoint" />
+            <mxPoint x="750" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. build view model with warnings" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="382" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="565" y="382" />
+              <mxPoint x="565" y="416" />
+            </Array>
+            <mxPoint x="470" y="416" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. render printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="436" as="sourcePoint" />
+            <mxPoint x="1065" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. return printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="490" as="sourcePoint" />
+            <mxPoint x="260" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-007 / OC-009 / FR-015. Report includes snapshots, expected repayments/grants, allocations, remaining amount, and warnings." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="588" width="1160" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-010" name="DSD-010 Generate Investment Listing Report">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-010 Generate Investment Listing Report" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1200" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-010 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="950" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation Manager&lt;br&gt;/ Trustees" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="165" as="sourcePoint" />
+            <mxPoint x="260" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="ReportService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="390" y="100" width="160" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="165" as="sourcePoint" />
+            <mxPoint x="470" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="InvestmentRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="650" y="100" width="200" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="165" as="sourcePoint" />
+            <mxPoint x="750" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="renderer" value="ReportRenderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="980" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="renderer_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1065" y="165" as="sourcePoint" />
+            <mxPoint x="1065" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-010" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-010" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="462" y="256" width="16" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-010" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="742" y="310" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="renderer_act_dsd-010" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1057" y="418" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request investment listing" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="260" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. generateInvestmentListing" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="274" as="sourcePoint" />
+            <mxPoint x="470" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. find all investments" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="328" as="sourcePoint" />
+            <mxPoint x="750" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. build listing view" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="382" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="565" y="382" />
+              <mxPoint x="565" y="416" />
+            </Array>
+            <mxPoint x="470" y="416" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. render printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="436" as="sourcePoint" />
+            <mxPoint x="1065" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. return report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="490" as="sourcePoint" />
+            <mxPoint x="260" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-008 / OC-010 / FR-016. Report includes item number, item name, estimated annual return, and return last updated date." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="588" width="1160" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dsd-011" name="DSD-011 Generate Mortgage Listing Report">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1380" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="DSD-011 Generate Mortgage Listing Report" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1300" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="OC-011 internal object collaboration" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="1300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation Manager&lt;br&gt;/ Trustees" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="165" as="sourcePoint" />
+            <mxPoint x="82" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="190" y="100" width="110" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="165" as="sourcePoint" />
+            <mxPoint x="245" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="ReportService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="service_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="165" as="sourcePoint" />
+            <mxPoint x="435" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo" value="MortgageRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="590" y="100" width="180" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="165" as="sourcePoint" />
+            <mxPoint x="680" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="calc" value="MortgageCalculator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="840" y="100" width="180" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="calc_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="165" as="sourcePoint" />
+            <mxPoint x="930" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="renderer" value="ReportRenderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="100" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="renderer_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1195" y="165" as="sourcePoint" />
+            <mxPoint x="1195" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_act_dsd-011" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="237" y="202" width="16" height="366" as="geometry" />
+        </mxCell>
+        <mxCell id="service_act_dsd-011" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="427" y="256" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_act_dsd-011" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="672" y="310" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="calc_act_dsd-011" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="922" y="364" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="renderer_act_dsd-011" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1187" y="472" width="16" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request mortgage listing" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="220" as="sourcePoint" />
+            <mxPoint x="245" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. generateMortgageListing" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="274" as="sourcePoint" />
+            <mxPoint x="435" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. find all mortgages" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="328" as="sourcePoint" />
+            <mxPoint x="680" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. calculate weekly grant" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="382" as="sourcePoint" />
+            <mxPoint x="930" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. apply report-view authorization" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="436" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="530" y="436" />
+              <mxPoint x="530" y="470" />
+            </Array>
+            <mxPoint x="435" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. render printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="490" as="sourcePoint" />
+            <mxPoint x="1195" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7. return report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="544" as="sourcePoint" />
+            <mxPoint x="245" y="544" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="UC-009 / OC-011 / FR-017. Report includes mortgage details, update dates, and estimated weekly grant; income fields are role-filtered." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="642" width="1260" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>

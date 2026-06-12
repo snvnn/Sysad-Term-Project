@@ -1,94 +1,286 @@
 <mxfile host="app.diagrams.net" modified="2026-06-12T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
-<diagram id="ssd-001" name="SSD-001 Run Weekly Funds Computation">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="760" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="SSD-001 Run Weekly Funds Computation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="900" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="SSD boundary: actor to MSG Foundation Pilot System only" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="900" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="650" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation
-Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="90" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="112" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="system" value="MSG Foundation
-Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="520" y="100" width="260" height="46" as="geometry"/></mxCell>
-    <mxCell id="system_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="650" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request weekly computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="220" as="sourcePoint"/><mxPoint x="650" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. show data freshness warnings" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="274" as="sourcePoint"/><mxPoint x="112" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. confirm run computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="328" as="sourcePoint"/><mxPoint x="650" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. return computation result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="382" as="sourcePoint"/><mxPoint x="112" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. finalize or save report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="436" as="sourcePoint"/><mxPoint x="650" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. confirm computation saved" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="490" as="sourcePoint"/><mxPoint x="112" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="Covers UC-004 and FR-004~FR-012. Q-008: expected mortgage repayments are beneficiary-paid weekly repayments for active mortgages." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="588" width="860" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="ssd-002" name="SSD-002 Manage Mortgage Data">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="760" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="SSD-002 Manage Mortgage Data" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="900" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="SSD boundary: actor to MSG Foundation Pilot System only" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="900" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="650" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Mortgage Program
-Officer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="90" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="112" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="system" value="MSG Foundation
-Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="520" y="100" width="260" height="46" as="geometry"/></mxCell>
-    <mxCell id="system_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="650" y="165" width="1" height="445" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. open mortgage management" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="220" as="sourcePoint"/><mxPoint x="650" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. show mortgage list" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="274" as="sourcePoint"/><mxPoint x="112" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. submit mortgage data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="328" as="sourcePoint"/><mxPoint x="650" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. show validation result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="382" as="sourcePoint"/><mxPoint x="112" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m5" value="5. save mortgage record" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="436" as="sourcePoint"/><mxPoint x="650" y="436" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m6" value="6. confirm mortgage saved" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="490" as="sourcePoint"/><mxPoint x="112" y="490" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="Covers UC-003 and FR-003, FR-006~FR-009. Applicant eligibility and 90% mortgage screening are outside the pilot system." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="588" width="860" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="ssd-003" name="SSD-003 Check Home Fundability">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="680" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="SSD-003 Check Home Fundability" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="900" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="SSD boundary: actor to MSG Foundation Pilot System only" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="900" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="650" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation
-Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="90" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="112" y="165" width="1" height="365" as="geometry"/></mxCell>
-    <mxCell id="system" value="MSG Foundation
-Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="520" y="100" width="260" height="46" as="geometry"/></mxCell>
-    <mxCell id="system_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="650" y="165" width="1" height="365" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request fundability check" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="220" as="sourcePoint"/><mxPoint x="650" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. return fundability result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="274" as="sourcePoint"/><mxPoint x="112" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. request record allocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="328" as="sourcePoint"/><mxPoint x="650" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. confirm allocation recorded" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="382" as="sourcePoint"/><mxPoint x="112" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="Covers UC-005, UC-006, FR-013, and FR-014. Checking fundability does not reduce funds; recording allocation performs the reduction." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="480" width="860" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
-<diagram id="ssd-004" name="SSD-004 Generate Reports">
-<mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="680" math="0" shadow="0">
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <mxCell id="title" value="SSD-004 Generate Reports" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="24" width="900" height="34" as="geometry"/></mxCell>
-    <mxCell id="subtitle" value="SSD boundary: actor to MSG Foundation Pilot System only" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="58" width="900" height="26" as="geometry"/></mxCell>
-    <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1"><mxGeometry x="650" y="58" width="290" height="24" as="geometry"/></mxCell>
-    <mxCell id="actor" value="Foundation Manager
-/ Trustees" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="90" y="95" width="45" height="82" as="geometry"/></mxCell>
-    <mxCell id="actor_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="112" y="165" width="1" height="365" as="geometry"/></mxCell>
-    <mxCell id="system" value="MSG Foundation
-Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1"><mxGeometry x="520" y="100" width="260" height="46" as="geometry"/></mxCell>
-    <mxCell id="system_life" style="shape=line;html=1;strokeColor=#999999;dashed=1;strokeWidth=1;" vertex="1" parent="1"><mxGeometry x="650" y="165" width="1" height="365" as="geometry"/></mxCell>
-    <mxCell id="m1" value="1. request report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="220" as="sourcePoint"/><mxPoint x="650" y="220" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m2" value="2. show options or validation message" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="274" as="sourcePoint"/><mxPoint x="112" y="274" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m3" value="3. confirm print/export request" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="112" y="328" as="sourcePoint"/><mxPoint x="650" y="328" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="m4" value="4. return printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="650" y="382" as="sourcePoint"/><mxPoint x="112" y="382" as="targetPoint"/></mxGeometry></mxCell>
-    <mxCell id="note" value="Covers UC-007~UC-009 and FR-015~FR-017. Output medium is flexible as long as print-on-request is supported." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1"><mxGeometry x="40" y="480" width="860" height="62" as="geometry"/></mxCell>
-  </root>
-</mxGraphModel>
-</diagram>
+  <diagram id="ssd-001" name="SSD-001 Run Weekly Funds Computation">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD-001 Run Weekly Funds Computation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="900" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="SSD boundary: actor to MSG Foundation Pilot System only" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="900" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="650" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation&lt;br&gt;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="165" as="sourcePoint" />
+            <mxPoint x="112" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system" value="MSG Foundation&lt;br&gt;Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="100" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="system_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="165" as="sourcePoint" />
+            <mxPoint x="650" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system_act_ssd-001" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="642" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request weekly computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="220" as="sourcePoint" />
+            <mxPoint x="650" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. show data freshness warnings" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="274" as="sourcePoint" />
+            <mxPoint x="112" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. confirm run computation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="328" as="sourcePoint" />
+            <mxPoint x="650" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. return computation result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="382" as="sourcePoint" />
+            <mxPoint x="112" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. finalize or save report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="436" as="sourcePoint" />
+            <mxPoint x="650" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. confirm computation saved" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="490" as="sourcePoint" />
+            <mxPoint x="112" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="Covers UC-004 and FR-004~FR-012. Q-008: expected mortgage repayments are beneficiary-paid weekly repayments for active mortgages." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="588" width="860" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ssd-002" name="SSD-002 Manage Mortgage Data">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD-002 Manage Mortgage Data" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="900" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="SSD boundary: actor to MSG Foundation Pilot System only" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="900" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="650" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Mortgage Program&lt;br&gt;Officer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="165" as="sourcePoint" />
+            <mxPoint x="112" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system" value="MSG Foundation&lt;br&gt;Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="100" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="system_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="165" as="sourcePoint" />
+            <mxPoint x="650" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system_act_ssd-002" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="642" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. open mortgage management" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="220" as="sourcePoint" />
+            <mxPoint x="650" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. show mortgage list" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="274" as="sourcePoint" />
+            <mxPoint x="112" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. submit mortgage data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="328" as="sourcePoint" />
+            <mxPoint x="650" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. show validation result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="382" as="sourcePoint" />
+            <mxPoint x="112" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. save mortgage record" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="436" as="sourcePoint" />
+            <mxPoint x="650" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. confirm mortgage saved" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="490" as="sourcePoint" />
+            <mxPoint x="112" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="Covers UC-003 and FR-003, FR-006~FR-009. Applicant eligibility and 90% mortgage screening are outside the pilot system." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="588" width="860" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ssd-003" name="SSD-003 Check Home Fundability">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="680" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD-003 Check Home Fundability" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="900" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="SSD boundary: actor to MSG Foundation Pilot System only" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="900" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="650" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation&lt;br&gt;Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="165" as="sourcePoint" />
+            <mxPoint x="112" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system" value="MSG Foundation&lt;br&gt;Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="100" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="system_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="165" as="sourcePoint" />
+            <mxPoint x="650" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system_act_ssd-003" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="642" y="202" width="16" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request fundability check" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="220" as="sourcePoint" />
+            <mxPoint x="650" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. return fundability result" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="274" as="sourcePoint" />
+            <mxPoint x="112" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. request record allocation" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="328" as="sourcePoint" />
+            <mxPoint x="650" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. confirm allocation recorded" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="382" as="sourcePoint" />
+            <mxPoint x="112" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="Covers UC-005, UC-006, FR-013, and FR-014. Checking fundability does not reduce funds; recording allocation performs the reduction." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="860" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ssd-004" name="SSD-004 Generate Reports">
+    <mxGraphModel dx="1440" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="680" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SSD-004 Generate Reports" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="900" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="SSD boundary: actor to MSG Foundation Pilot System only" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#666666;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="900" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="solid = request / dashed = response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#666666;align=right;" vertex="1" parent="1">
+          <mxGeometry x="650" y="58" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Foundation Manager&lt;br&gt;/ Trustees" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="95" width="45" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="165" as="sourcePoint" />
+            <mxPoint x="112" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system" value="MSG Foundation&lt;br&gt;Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="100" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="system_life" style="endArrow=none;html=1;rounded=0;strokeColor=#4A4A4A;dashed=1;dashPattern=8 8;strokeWidth=2;pointerEvents=0;" parent="1" edge="1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="165" as="sourcePoint" />
+            <mxPoint x="650" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system_act_ssd-004" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="642" y="202" width="16" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="1. request report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="220" as="sourcePoint" />
+            <mxPoint x="650" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. show options or validation message" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="274" as="sourcePoint" />
+            <mxPoint x="112" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. confirm print/export request" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112" y="328" as="sourcePoint" />
+            <mxPoint x="650" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. return printable report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.6;fontSize=12;labelBackgroundColor=#ffffff;align=center;verticalAlign=middle;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="382" as="sourcePoint" />
+            <mxPoint x="112" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="Covers UC-007~UC-009 and FR-015~FR-017. Output medium is flexible as long as print-on-request is supported." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="860" height="62" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>
