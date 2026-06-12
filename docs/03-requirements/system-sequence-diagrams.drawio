@@ -22,6 +22,9 @@
             <mxPoint x="112" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="actor_act_ssd-001" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="104" y="202" width="16" height="312" as="geometry" />
+        </mxCell>
         <mxCell id="system" value="MSG Foundation&lt;br&gt;Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="520" y="100" width="260" height="46" as="geometry" />
         </mxCell>
@@ -98,6 +101,9 @@
             <mxPoint x="112" y="165" as="sourcePoint" />
             <mxPoint x="112" y="610" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="actor_act_ssd-002" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="104" y="202" width="16" height="312" as="geometry" />
         </mxCell>
         <mxCell id="system" value="MSG Foundation&lt;br&gt;Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="520" y="100" width="260" height="46" as="geometry" />
@@ -176,6 +182,9 @@
             <mxPoint x="112" y="530" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="actor_act_ssd-003" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="104" y="202" width="16" height="204" as="geometry" />
+        </mxCell>
         <mxCell id="system" value="MSG Foundation&lt;br&gt;Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="520" y="100" width="260" height="46" as="geometry" />
         </mxCell>
@@ -240,6 +249,9 @@
             <mxPoint x="112" y="165" as="sourcePoint" />
             <mxPoint x="112" y="530" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="actor_act_ssd-004" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111111;strokeWidth=1.4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="104" y="202" width="16" height="204" as="geometry" />
         </mxCell>
         <mxCell id="system" value="MSG Foundation&lt;br&gt;Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;spacing=8;" vertex="1" parent="1">
           <mxGeometry x="520" y="100" width="260" height="46" as="geometry" />
