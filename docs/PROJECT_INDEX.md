@@ -81,5 +81,5 @@
 | Data/API/UI/security designs are aligned | API contract, data model, report spec, security docs |
 | ADR candidates documented | Architecture design |
 | Implementation-ready WBS exists | Roadmap and WBS |
-| Unconfirmed items separated | Core questions, SRS open issues |
+| Domain decisions separated | Core questions, SRS decisions |
 | No implementation performed | Scope statement |

@@ -5,7 +5,7 @@
 - Report-first: primary user goal is to obtain trustworthy weekly calculations and listings.
 - Minimal navigation: file pilot should avoid complex workflows.
 - Data freshness visibility: every report should show last updated dates for inputs.
-- Explicit warnings: unresolved items such as expected mortgage repayment scope should be displayed until confirmed.
+- Explicit warnings: stale or missing input data should be visible before reports are finalized.
 
 ## 2. Information Architecture
 
@@ -71,7 +71,6 @@ flowchart TD
   - allocations made during week
   - remaining available amount
 - Warnings:
-  - formula assumptions
   - stale input data
   - missing data
 
@@ -81,14 +80,14 @@ Formula used:
 available = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants
 ```
 
-Open warning to display until resolved: `expected mortgage repayments` currently uses the recommended beneficiary-paid interpretation but remains subject to final domain discussion.
+Formula note: `expected mortgage repayments` uses the resolved Q-008 rule: sum of expected beneficiary-paid weekly repayment amounts for active mortgages.
 
 ### Example Layout
 
 ```text
 MSG Foundation — Weekly Funds Computation
 Week of: 2026-06-15
-Formula: Q-001 resolved — income - expenses + repayments - grants
+Formula: Q-001/Q-008 resolved — income - expenses + beneficiary repayments - grants
 
 Investment income this week:      $100,000.00
 Operating expense this week:      $ 10,000.00
@@ -144,7 +143,6 @@ Columns:
 |  Expected Grants:     $  5,000.00                          |
 |                                                            |
 | Warnings                                                   |
-|  ! Expected mortgage repayments scope needs discussion     |
 |  ! 2 mortgage income records older than 90 days            |
 |                                                            |
 | Reports: [Weekly Funds] [Investments] [Mortgages]          |
@@ -159,7 +157,6 @@ Columns:
 | No operating expense | Operating expense estimate is missing. | Add current estimate. |
 | No mortgages | No active mortgages found. | Report can still run with zero mortgage totals. |
 | Stale data | Some input data may be stale. | Review updated dates. |
-| Repayment scope open | Expected mortgage repayments interpretation requires final confirmation. | Continue with recommended beneficiary-paid interpretation and visible warning. |
 
 ## 10. Accessibility Notes
 

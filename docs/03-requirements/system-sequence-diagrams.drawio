@@ -24,7 +24,7 @@ Pilot System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeCo
     <mxCell id="m5label" value="5. finalizeOrSaveReport()" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="190" y="379" width="280" height="24" as="geometry"/></mxCell>
     <mxCell id="m6" value="confirmComputationSaved(computationId)" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;dashed=1;" edge="1" parent="1" source="systemLife" target="actorLife"><mxGeometry relative="1" as="geometry"/></mxCell>
     <mxCell id="m6label" value="6. confirmComputationSaved(computationId)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="190" y="427" width="280" height="24" as="geometry"/></mxCell>
-    <mxCell id="note" value="Covers UC-004 and FR-004~FR-012. Q-008 remains open: expected mortgage repayments uses the recommended beneficiary-paid interpretation until confirmed." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;spacing=8;" vertex="1" parent="1"><mxGeometry x="40" y="590" width="680" height="95" as="geometry"/></mxCell>
+    <mxCell id="note" value="Covers UC-004 and FR-004~FR-012. Q-008 resolved: expected mortgage repayments are expected beneficiary-paid weekly repayments for active mortgages." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;spacing=8;" vertex="1" parent="1"><mxGeometry x="40" y="590" width="680" height="95" as="geometry"/></mxCell>
   </root>
 </mxGraphModel>
 </diagram>

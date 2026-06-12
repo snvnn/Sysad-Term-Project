@@ -6,7 +6,6 @@
 
 - `Resolved`: 출처 또는 사용자 확인으로 결정됨.
 - `Developer Decision`: 고객/출처가 정하지 않았으므로 개발자가 설계 결정으로 처리.
-- `Open / Needs Discussion`: 출처에 없고 해석 차이가 커서 추가 논의 필요.
 
 ## 1. 주간 가용 자금 산식
 
@@ -124,19 +123,16 @@ MSG Foundation은 100% 모기지를 부여하지만, 조건 중 “90% 모기지
 
 ### Q-008. 총 예상 모기지 상환액은 모든 활성 모기지의 주간 P&I와 고객 부담금을 포함하는가?
 
-모기지 데이터에는 `Weekly principal and interest payment`, `Current combined gross weekly income`, 세금, 보험료가 있다. 알고리즘에서는 “총 예상 모기지 상환액”과 “총 예상 교부금”을 별도 단계로 계산한다고만 되어 있어, 상환액의 정확한 범위는 명확하지 않다.
+모기지 데이터에는 `Weekly principal and interest payment`, `Current combined gross weekly income`, 세금, 보험료가 있다. 알고리즘에서는 “총 예상 모기지 상환액”과 “총 예상 교부금”을 별도 단계로 계산한다고만 되어 있어, 상환액의 정확한 범위는 사용자 결정으로 확정했다.
 
-가능한 해석:
+결정:
 
-1. `expected mortgage repayments` = 수혜자가 실제로 재단에 납부할 것으로 예상되는 금액.
-2. `expected mortgage repayments` = 보조금 지급 전 P&I + 에스크로 전체 비용.
+- `expected mortgage repayments`는 활성 mortgage별로 수혜자가 실제로 재단에 납부할 것으로 예상되는 주간 상환액의 합이다.
+- 각 mortgage의 수혜자 예상 주간 상환액은 `total weekly mortgage cost - weekly grant`이다.
+- 같은 값은 `min(total weekly mortgage cost, affordability cap)`으로도 표현할 수 있다.
+- 보조금 지급 전 전체 P&I + 에스크로 총액을 그대로 더하지 않는다. Q-001 산식이 `+ expected mortgage repayments - expected grants` 구조이므로, 전체 비용을 repayments로 더하면 보조금을 중복 차감하게 된다.
 
-권장 해석:
-
-- 현재 결정된 산식이 `+ expected mortgage repayments - expected grants` 구조이므로, 중복 계산을 피하기 위해 `expected mortgage repayments`는 수혜자로부터 실제 받을 것으로 예상되는 상환액으로 해석하는 것이 가장 안전하다.
-- 단, 출처가 명확하지 않으므로 최종 구현 전 추가 논의가 필요하다.
-
-상태: `Open / Needs Discussion`
+상태: `Resolved by User Decision`
 
 ## 9. 시스템 형태
 

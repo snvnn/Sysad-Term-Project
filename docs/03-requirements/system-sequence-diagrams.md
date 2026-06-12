@@ -40,9 +40,9 @@ Main system events:
 5. `finalizeOrSaveReport()`
 6. `confirmComputationSaved(computationId)`
 
-Open issue carried forward:
+Domain decision carried forward:
 
-- Q-008: `expected mortgage repayments` scope remains `Open / Needs Discussion`.
+- Q-008: `expected mortgage repayments` is the sum of expected beneficiary-paid weekly repayments for active mortgages.
 
 ### SSD-002. Manage Mortgage Data
 
@@ -90,5 +90,5 @@ Design note:
 
 - [x] SSDs use only actor and system boundary participants.
 - [x] SSDs are based on brief use cases.
-- [x] Q-008 is carried forward as an open issue.
+- [x] Q-008 resolved repayment definition is carried forward.
 - [x] Draw.io file contains one page per SSD.

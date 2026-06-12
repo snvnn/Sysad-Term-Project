@@ -53,9 +53,9 @@
 | TC-CALC-004 | FR-007 | weekly P&I=600, escrow=120 | total weekly mortgage cost = 720 | Draft |
 | TC-CALC-005 | FR-008 | weekly income=2000 | affordability cap = 560 | Draft |
 | TC-CALC-006 | FR-009 | total cost=720, cap=560 | weekly grant = 160 | Draft |
-| TC-CALC-007 | FR-010 | active mortgages using recommended beneficiary-paid interpretation | expected mortgage repayments equals sum of expected beneficiary-paid amounts | Open / Needs Discussion |
+| TC-CALC-007 | FR-010 | active mortgage A cost=720 grant=160; active mortgage B cost=500 grant=0; suspended mortgage cost=300 grant=0 | expected mortgage repayments = 560 + 500 = 1060; suspended mortgage excluded | Resolved |
 | TC-CALC-008 | FR-011 | two grants 160 and 0 | expected grants = 160 | Draft |
-| TC-CALC-009 | FR-012 | investment=1000, expense=500, repayments=720, grants=160 | available amount = 1060 | Resolved |
+| TC-CALC-009 | FR-012 | investment=1000, expense=500, repayments=560, grants=160 | available amount = 900 | Resolved |
 
 ## 5. Data Validation Test Cases
 
@@ -129,5 +129,5 @@ Implementation should not be considered ready unless:
 - all Must functional requirements have tests
 - all core calculation tests pass
 - report outputs include required fields
-- resolved formula rules are implemented exactly and remaining open issues are visibly marked
+- resolved formula rules are implemented exactly
 - no sensitive sample data is real personal data

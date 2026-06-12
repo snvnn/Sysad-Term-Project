@@ -125,6 +125,8 @@ erDiagram
 | status | varchar | not null |
 | created_at | datetime | not null |
 
+`expected_mortgage_repayments` stores the resolved Q-008 total: the sum of expected beneficiary-paid weekly repayment amounts for active mortgages at computation time.
+
 ### `weekly_computation_items`
 
 Stores calculation input snapshots.

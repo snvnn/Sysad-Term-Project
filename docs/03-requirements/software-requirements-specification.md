@@ -19,7 +19,7 @@
 | FR-007 | 시스템은 각 모기지의 총 주간 모기지 비용을 계산해야 한다. | Must | `weekly P&I + weekly escrow`를 계산한다. | PDF p.3 |
 | FR-008 | 시스템은 각 모기지의 부부 부담 한도를 계산해야 한다. | Must | `current combined gross weekly income * 0.28`을 계산한다. | PDF p.3 |
 | FR-009 | 시스템은 각 모기지의 주간 보조금 예상액을 계산해야 한다. | Must | `max(0, total weekly mortgage cost - income cap)`으로 계산한다. | PDF p.3 |
-| FR-010 | 시스템은 해당 주의 총 예상 모기지 상환액을 계산해야 한다. | Must | 활성 모기지들의 수혜자 실제 예상 상환액 합계를 산출한다. 단, 정확한 합산 범위는 OI-REQ-002로 추가 논의한다. | PDF p.3-4 |
+| FR-010 | 시스템은 해당 주의 총 예상 모기지 상환액을 계산해야 한다. | Must | 활성 모기지별 `total weekly mortgage cost - weekly grant`의 합계를 산출한다. 이는 각 활성 모기지에서 수혜자가 실제로 납부할 것으로 예상되는 주간 상환액이다. | PDF p.3-4 + user decision Q-008 |
 | FR-011 | 시스템은 해당 주의 총 예상 보조금 금액을 계산해야 한다. | Must | 활성 모기지별 weekly grant estimate 합계를 산출한다. | PDF p.3-4 |
 | FR-012 | 시스템은 주 시작 시 사용 가능한 금액을 계산해야 한다. | Must | `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`로 산출한다. | PDF p.3-4 + project decision Q-001 |
 | FR-013 | 시스템은 주택 비용이 가용 모기지 금액 이하인지 판단할 수 있어야 한다. | Should | 입력된 주택 비용이 current available amount 이하이면 fundable로 표시한다. | PDF p.4 |
@@ -70,17 +70,18 @@
 | BR-004 | Total weekly mortgage cost = weekly P&I + weekly escrow. |
 | BR-005 | Couple weekly affordability cap = current combined gross weekly income * 28%. |
 | BR-006 | Weekly grant = max(0, total weekly mortgage cost - affordability cap). |
-| BR-007 | A new home purchase is fundable within the current week if home cost <= remaining available mortgage amount. |
-| BR-008 | When a home purchase is funded, remaining weekly available amount decreases by home cost. |
-| BR-009 | Starting available amount = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants. |
-| BR-010 | Week start is the first business day of the week; week end is the last business day, excluding public holidays and foundation closure days. |
+| BR-007 | Expected mortgage repayments = sum of active mortgage expected beneficiary weekly repayments, where each expected beneficiary weekly repayment = total weekly mortgage cost - weekly grant = min(total weekly mortgage cost, affordability cap). |
+| BR-008 | Starting available amount = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants. |
+| BR-009 | A new home purchase is fundable within the current week if home cost <= remaining available mortgage amount. |
+| BR-010 | When a home purchase is funded, remaining weekly available amount decreases by home cost. |
+| BR-011 | Week start is the first business day of the week; week end is the last business day, excluding public holidays and foundation closure days. |
 
-## 6. Open Issues
+## 6. Decisions and Former Open Issues
 
 | ID | Issue | Status | Impact / Resolution |
 |---|---|---|---|
 | OI-REQ-001 | Starting available amount formula sign convention. | Resolved | Use `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`. |
-| OI-REQ-002 | Meaning of “total expected mortgage repayments”. | Open / Needs Discussion | Recommended interpretation is actual expected beneficiary repayments, but final implementation should confirm. |
+| OI-REQ-002 | Meaning of “total expected mortgage repayments”. | Resolved by User Decision | Use the sum of expected beneficiary-paid weekly repayment amounts for active mortgages. |
 | OI-REQ-003 | Whether eligibility screening is in pilot scope. | Resolved — Out of Pilot | Eligibility screening, 90% mortgage comparison, employment evidence, and home price checks are handled offline. |
 | OI-REQ-004 | Report medium/platform is not specified. | Developer Decision | Developer may choose CLI/Web/Desktop and print-on-request report presentation. |
 | OI-REQ-005 | Rounding rules are not specified. | Developer Decision | Use decimal/fixed-point money and round stored/displayed values to cents. |

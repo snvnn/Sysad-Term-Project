@@ -80,7 +80,7 @@ flowchart TD
 - Guardrails:
   - do not implement out-of-pilot eligibility screening unless approved
   - do not use floating point for money
-  - implement Q-001 formula exactly and keep Q-008 repayment-scope warning visible until resolved
+  - implement Q-001 formula and resolved Q-008 beneficiary-paid repayment rule exactly
 
 ### Builder Packet
 
@@ -92,7 +92,7 @@ flowchart TD
 
 - Check every Must requirement has implementation and test coverage.
 - Check data model matches PDF data list.
-- Check Q-001 formula is implemented exactly and Q-008 repayment-scope ambiguity is not hidden.
+- Check Q-001 formula and resolved Q-008 repayment rule are implemented exactly.
 - Check reports include update dates and warning states.
 
 ### QA Packet
@@ -108,9 +108,9 @@ flowchart TD
 | ID | Decision | Owner | Status | Blocking? |
 |---|---|---|---|---|
 | DEC-001 | Implementation platform: CLI/Web/Desktop | Developer | Developer Decision | No; choose simplest report-first platform for implementation. |
-| DEC-002 | Exact available amount formula | Project | Resolved | No for Q-001; Q-008 repayment scope still needs discussion. |
+| DEC-002 | Exact available amount formula | Project | Resolved | No; Q-001 and Q-008 are resolved. |
 | DEC-003 | Rounding policy | Developer | Developer Decision | No; use decimal/fixed-point and cent rounding. |
 | DEC-004 | Report output format | Developer | Developer Decision | No; print-on-request compatible text/HTML/report viewer acceptable. |
 | DEC-005 | Eligibility scope | Project | Resolved — Out of Pilot | No; defer eligibility screening and 90% mortgage comparison. |
 | DEC-006 | Weekly start/end date | Project | Resolved | No; use first/last business day excluding holidays/closures. |
-| DEC-007 | Expected mortgage repayments scope | Domain/User | Open / Needs Discussion | Yes before final implementation accuracy. |
+| DEC-007 | Expected mortgage repayments scope | Domain/User | Resolved by User Decision | No; use beneficiary-paid weekly repayments for active mortgages. |

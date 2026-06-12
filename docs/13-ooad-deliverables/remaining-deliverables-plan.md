@@ -14,20 +14,25 @@
 | Operation Contracts | 완료됨. 각 시스템 오퍼레이션의 precondition/postcondition 중심. |
 | Class Diagram | 완료됨. 업그레이드된 도메인 모델에 attributes/methods/relationships를 반영. |
 | Design Sequence Diagrams | 완료됨. 내부 객체 간 협력 흐름을 표현. |
-| Domain open issue cleanup | 완료됨. 현재 핵심 도메인 open issue는 Q-008 하나만 남음. |
+| Domain decision cleanup | 완료됨. Q-008까지 사용자 결정으로 확정되어 현재 핵심 도메인 미확정 이슈는 없음. |
 
-## 3. Current Remaining Open Issues
+## 3. Resolved Domain Decisions
 
 ### Q-008 / OI-REQ-002 — Expected Mortgage Repayments Scope
 
-`expected mortgage repayments`의 정확한 합산 범위는 출처에서 명확하지 않다.
+`expected mortgage repayments`의 정확한 합산 범위는 사용자 결정으로 확정되었다.
 
-Current status: `Open / Needs Discussion`
+Current status: `Resolved by User Decision`
 
-Recommended working interpretation:
+Resolved interpretation:
 
 ```text
-expected mortgage repayments = expected amount actually paid by beneficiaries to the foundation
+expected mortgage repayments
+= sum(active mortgage expected beneficiary weekly repayment)
+
+expected beneficiary weekly repayment
+= total weekly mortgage cost - weekly grant
+= min(total weekly mortgage cost, affordability cap)
 ```
 
 Reason:
@@ -38,7 +43,7 @@ Reason:
 Impact:
 
 - Use Case, SSD, Operation Contract, Class Diagram, Design Sequence Diagram은 진행 가능하다.
-- 단, 계산 정확성 확정을 위해 최종 구현 전에는 Q-008을 반드시 사용자/도메인 담당자에게 확인해야 한다.
+- 각 산출물은 Q-008을 확정 계산 규칙으로 표시해야 한다.
 
 ## 4. Planned Deliverable Order
 
@@ -145,7 +150,7 @@ Required fields per contract:
 Verification:
 
 - Postconditions must describe domain state changes.
-- `runWeeklyComputation` must mention Q-008 as open where repayment scope is used.
+- `runWeeklyComputation` must use the resolved Q-008 beneficiary-paid repayment rule where repayment scope is used.
 
 ### Step 4. Class Diagram
 
@@ -249,6 +254,6 @@ The OOAD package is ready when:
 - [x] Operation Contracts define pre/postconditions for core operations.
 - [x] Class Diagram includes attributes, methods, and relationships.
 - [x] Design Sequence Diagrams show internal collaboration for core flows.
-- [x] Remaining open issues are explicitly documented, especially Q-008.
+- [x] Domain decisions are explicitly documented, including resolved Q-008.
 - [x] Project index and README point to all deliverables.
-- [ ] A docs-focused commit is created if the submission workflow requires Git history.
+- [x] A docs-focused commit is created if the submission workflow requires Git history.

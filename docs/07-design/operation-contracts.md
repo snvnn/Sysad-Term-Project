@@ -12,7 +12,7 @@
 | Money | 모든 금액은 decimal/fixed-point로 계산하고 저장/표시는 센트 단위로 반올림한다. |
 | Dates | 주 시작일은 공휴일/재단 휴업일을 제외한 첫 영업일이다. |
 | Actor Authorization | 사전 조건에는 최소 권한을 명시한다. 세부 인증 구현은 개발자 재량이다. |
-| Q-008 | `expected mortgage repayments`는 권장 해석인 수혜자 실제 예상 상환액을 사용하되 최종 확인 전까지 open issue로 유지한다. |
+| Q-008 | `expected mortgage repayments`는 활성 mortgage별 수혜자 실제 예상 주간 상환액의 합으로 확정한다. |
 
 ## 3. Contract Summary
 
@@ -87,10 +87,10 @@
 | Field | Description |
 |---|---|
 | Operation | `runWeeklyComputation(weekStartDate, formulaVersion)` |
-| Cross References | UC-004, SSD-001, FR-004~FR-012, DR-004, BR-001~BR-010 |
+| Cross References | UC-004, SSD-001, FR-004~FR-012, DR-004, BR-001~BR-011 |
 | Preconditions | Actor is authorized to run weekly computation. `weekStartDate` is the first business day of the week. Active investment data exists or the system can treat missing investments as zero with warning. Active operating expense estimate exists or the system displays a blocking warning. Active mortgages are available or mortgage totals are zero. Formula version is explicit. |
-| Postconditions | Weekly investment income is calculated from investments. Weekly operating expense is calculated from the active operating expense estimate. Weekly escrow, total weekly mortgage cost, affordability cap, and weekly grant are calculated for active mortgages. Expected grants total is calculated. Expected mortgage repayments total is calculated using the current working interpretation. Starting available amount is calculated as `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`. A `WeeklyComputation` is created with input snapshots and result fields. Warnings are attached for stale data or Q-008 repayment-scope uncertainty. |
-| Notes | Q-008 remains `Open / Needs Discussion`: `expected mortgage repayments` currently means expected amount actually paid by beneficiaries to the foundation. Final implementation should confirm this interpretation. |
+| Postconditions | Weekly investment income is calculated from investments. Weekly operating expense is calculated from the active operating expense estimate. Weekly escrow, total weekly mortgage cost, affordability cap, and weekly grant are calculated for active mortgages. Expected grants total is calculated. Expected mortgage repayments total is calculated as the sum of active mortgage expected beneficiary weekly repayments, where each repayment equals `total weekly mortgage cost - weekly grant`. Starting available amount is calculated as `weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants`. A `WeeklyComputation` is created with input snapshots and result fields. Warnings are attached for stale or missing data. |
+| Notes | Q-008 is resolved by user decision. `expected mortgage repayments` is the expected amount actually paid by beneficiaries to the foundation. |
 
 ### OC-007. checkHomeFundability
 
@@ -119,7 +119,7 @@
 | Operation | `generateWeeklyFundsReport(computationId)` |
 | Cross References | UC-007, SSD-004, FR-015, DR-004, NFR-002, NFR-003 |
 | Preconditions | Actor is authorized to view the weekly funds report. `WeeklyComputation` with `computationId` exists. |
-| Postconditions | A weekly funds report view is produced. The report includes week start date, formula version, generated timestamp, input summary, expected mortgage repayments, expected grants, starting available amount, allocations, remaining available amount, data freshness warnings, and Q-008 warning if unresolved. Source data is not modified. If audit logging is enabled, a report-generated audit event is recorded. |
+| Postconditions | A weekly funds report view is produced. The report includes week start date, formula version, generated timestamp, input summary, expected mortgage repayments, expected grants, starting available amount, allocations, remaining available amount, and data freshness warnings. Source data is not modified. If audit logging is enabled, a report-generated audit event is recorded. |
 | Notes | Output may be screen, printable text/HTML, or other developer-selected medium as long as print-on-request is supported. |
 
 ### OC-010. generateInvestmentListingReport
@@ -159,18 +159,21 @@
 | Design Sequence Diagram | Each contract maps to internal object collaboration in sequence diagrams. |
 | Test Strategy | Preconditions and postconditions become validation and acceptance checks. |
 
-## 7. Remaining Open Issue
+## 7. Resolved Calculation Decision
 
-Q-008 is the only calculation-domain issue carried into these contracts:
-
-```text
-What exactly is included in expected mortgage repayments?
-```
-
-Working interpretation for this design pass:
+Q-008 is resolved by user decision:
 
 ```text
-expected mortgage repayments = expected amount actually paid by beneficiaries to the foundation
+expected mortgage repayments
+= sum(active mortgage expected beneficiary weekly repayment)
 ```
 
-This avoids double-counting grants in the Q-001 formula, but should be confirmed before final implementation.
+Per active mortgage:
+
+```text
+expected beneficiary weekly repayment
+= total weekly mortgage cost - weekly grant
+= min(total weekly mortgage cost, affordability cap)
+```
+
+This avoids double-counting grants in the Q-001 formula.

@@ -46,7 +46,7 @@ docs/07-design/class-diagram.drawio
 weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants
 ```
 
-- Q-008 remains `Open / Needs Discussion`. This design places the working interpretation in `MortgageCalculator.calculateExpectedBeneficiaryRepayment(...)` and aggregates it through `FundsAvailabilityCalculator.calculateExpectedMortgageRepayments(...)`.
+- Q-008 is resolved by user decision. `MortgageCalculator.calculateExpectedBeneficiaryRepayment(...)` calculates `total weekly mortgage cost - weekly grant` for each active mortgage, and `FundsAvailabilityCalculator.calculateExpectedMortgageRepayments(...)` aggregates those values.
 - Eligibility screening, employment evidence checks, local median home price checks, and the 90% mortgage comparison remain out of pilot scope and are not modeled as classes here.
 
 ## 5. Verification Checklist
@@ -54,5 +54,5 @@ weekly investment income - weekly operating expenses + expected mortgage repayme
 - [x] Attributes align with `docs/08-data/data-model.md`.
 - [x] Operations support `docs/07-design/operation-contracts.md`.
 - [x] Relationships and multiplicities match the domain model.
-- [x] Q-008 calculation responsibility is visible and remains open.
+- [x] Q-008 calculation responsibility is visible and resolved.
 - [x] Draw.io file contains the class diagram source.

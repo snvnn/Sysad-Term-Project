@@ -62,15 +62,24 @@ Full index: [`docs/PROJECT_INDEX.md`](docs/PROJECT_INDEX.md)
 - 데이터 입력 권한은 단순 관리자/승인 운영 담당자 중심 모델을 기본으로 한다.
 - 금액은 decimal/fixed-point로 계산하고 저장/표시 시 센트 단위로 반올림한다.
 - 주간 기준은 공휴일과 재단 휴업일을 제외한 첫/마지막 영업일로 둔다.
+- `expected mortgage repayments`는 활성 mortgage별로 수혜자가 실제로 납부할 것으로 예상되는 주간 상환액의 합으로 확정한다.
 
-## Remaining Open Issue
+## Final Domain Decision
 
-- `expected mortgage repayments`가 수혜자 실제 예상 상환액인지, 보조금 지급 전 전체 P&I+에스크로 총액인지는 출처가 명확하지 않으므로 최종 구현 전 추가 논의가 필요하다. 현재 권장 해석은 수혜자 실제 예상 상환액 기준이다.
+Q-008은 사용자 결정으로 확정되었다.
+
+```text
+expected mortgage repayments
+= sum(active mortgage expected beneficiary weekly repayment)
+
+expected beneficiary weekly repayment
+= total weekly mortgage cost - weekly grant
+= min(total weekly mortgage cost, affordability cap)
+```
 
 ## Suggested Next Step
 
 공식 제출 전 다음을 확인한다.
 
-1. Q-008 `expected mortgage repayments` 합산 범위 최종 확인
-2. 문서 산출물 간 산식/용어 일관성 리뷰
-3. 제출 형식에 맞춘 최종 기술 문서 패키징
+1. 문서 산출물 간 산식/용어 일관성 리뷰
+2. 제출 형식에 맞춘 최종 기술 문서 패키징

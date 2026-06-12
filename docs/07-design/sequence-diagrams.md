@@ -58,7 +58,7 @@ The UI submits investment data to `InvestmentService`, which checks uniqueness t
 
 ### DSD-006. Run Weekly Computation
 
-`WeeklyComputationService` loads active source data, calls `FundsAvailabilityCalculator`, delegates per-mortgage calculations to `MortgageCalculator`, creates input snapshots, attaches Q-008 warnings, and saves a `WeeklyComputation`.
+`WeeklyComputationService` loads active source data, calls `FundsAvailabilityCalculator`, delegates per-mortgage calculations to `MortgageCalculator`, creates input snapshots, attaches stale or missing data warnings, and saves a `WeeklyComputation`.
 
 ### DSD-007. Check Home Fundability
 
@@ -85,6 +85,6 @@ The UI submits investment data to `InvestmentService`, which checks uniqueness t
 - [x] Each DSD maps to one Operation Contract.
 - [x] Internal objects are shown, unlike SSD.
 - [x] Object interactions are consistent with the Class Diagram methods.
-- [x] Q-008 remains visible in the weekly computation/report flow.
+- [x] Q-008 resolved repayment rule remains visible in the weekly computation/report flow.
 - [x] Out-of-pilot eligibility and 90% mortgage screening remain excluded.
 - [x] Draw.io file contains eleven DSD pages.

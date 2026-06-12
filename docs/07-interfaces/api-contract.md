@@ -126,15 +126,15 @@ Response:
   "expectedGrants": "5000.00",
   "startingAvailableAmount": "110000.00",
   "remainingAvailableAmount": "110000.00",
-  "formulaVersion": "Q-001-resolved-v1",
-  "status": "RESOLVED_FORMULA_WITH_OPEN_REPAYMENT_SCOPE",
+  "formulaVersion": "Q-001-Q-008-resolved-v1",
+  "status": "FINALIZED",
   "warnings": [
-    "Expected mortgage repayments use the recommended beneficiary-paid interpretation; final domain confirmation is still required."
+    "2 mortgage income records are older than 90 days."
   ]
 }
 ```
 
-> Formula Q-001-resolved-v1: `weeklyInvestmentIncome - weeklyOperatingExpense + expectedMortgageRepayments - expectedGrants`.
+> Formula Q-001-Q-008-resolved-v1: `weeklyInvestmentIncome - weeklyOperatingExpense + expectedMortgageRepayments - expectedGrants`; Q-008 defines `expectedMortgageRepayments` as the sum of expected beneficiary-paid weekly repayment amounts for active mortgages.
 
 #### `POST /weekly-computations/{id}/fundability-checks`
 
@@ -204,7 +204,6 @@ Returns all mortgages listing.
 | VALIDATION_ERROR | Input field invalid. |
 | NOT_FOUND | Requested resource does not exist. |
 | DUPLICATE_ID | item number/account number already exists. |
-| OPEN_DOMAIN_DECISION | Operation depends on a still-open domain interpretation, such as expected mortgage repayment scope. |
 | INSUFFICIENT_FUNDS | Allocation exceeds remaining weekly available amount. |
 
 ## 5. Compatibility Rules

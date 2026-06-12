@@ -70,10 +70,11 @@ erDiagram
 | BR-004 | Total weekly mortgage cost is weekly P&I plus weekly escrow. | Per mortgage. |
 | BR-005 | Couple affordability cap is 28% of current combined gross weekly income. | Per mortgage. |
 | BR-006 | Weekly grant is the positive difference between total weekly mortgage cost and affordability cap. | Never negative. |
-| BR-007 | Starting available amount = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants. | Q-001 resolved. |
-| BR-008 | A home purchase can be funded if its cost is not greater than remaining weekly available amount. | Pilot-level fundability. |
-| BR-009 | Funding a home purchase reduces remaining weekly available amount by the home cost. | During that week. |
-| BR-010 | Week start is the first business day and week end is the last business day, excluding public holidays and foundation closure days. | Q-007 resolved. |
+| BR-007 | Expected mortgage repayments = sum of active mortgage expected beneficiary weekly repayments. | Q-008 resolved. Per mortgage, expected beneficiary weekly repayment = total weekly mortgage cost - weekly grant = min(total weekly mortgage cost, affordability cap). |
+| BR-008 | Starting available amount = weekly investment income - weekly operating expenses + expected mortgage repayments - expected grants. | Q-001 resolved. |
+| BR-009 | A home purchase can be funded if its cost is not greater than remaining weekly available amount. | Pilot-level fundability. |
+| BR-010 | Funding a home purchase reduces remaining weekly available amount by the home cost. | During that week. |
+| BR-011 | Week start is the first business day and week end is the last business day, excluding public holidays and foundation closure days. | Q-007 resolved. |
 
 ## 5. Mortgage Calculation Example Shape
 
@@ -84,7 +85,8 @@ weekly_escrow = (annual_real_estate_tax + annual_homeowner_insurance_premium) / 
 total_weekly_mortgage_cost = weekly_principal_and_interest + weekly_escrow
 affordability_cap = current_combined_gross_weekly_income * 0.28
 weekly_grant = max(0, total_weekly_mortgage_cost - affordability_cap)
-customer_weekly_payment = total_weekly_mortgage_cost - weekly_grant
+expected_beneficiary_weekly_repayment = total_weekly_mortgage_cost - weekly_grant
+expected_beneficiary_weekly_repayment = min(total_weekly_mortgage_cost, affordability_cap)
 ```
 
 ## 6. State Model
@@ -128,7 +130,7 @@ customer_weekly_payment = total_weekly_mortgage_cost - weekly_grant
 | Q-005 | 데이터 입력 담당자와 권한 모델 | Developer Decision | 단순 관리자/승인 운영 담당자 입력 모델. 전체 변경 이력 대신 `Date last updated` 유지. |
 | Q-006 | 금액 반올림 규칙 | Developer Decision | decimal/fixed-point 계산, 저장/표시는 센트 단위 반올림. |
 | Q-007 | 매주 초/말 기준일 | Resolved by Project Decision | 공휴일/재단 휴업일을 제외한 첫/마지막 영업일. |
-| Q-008 | “총 예상 모기지 상환액”의 합산 범위 | Open / Needs Discussion | 권장 해석은 수혜자가 실제로 납부할 예상 상환액이나, 최종 구현 전 확인 필요. |
+| Q-008 | “총 예상 모기지 상환액”의 합산 범위 | Resolved by User Decision | 활성 mortgage별 수혜자 실제 예상 주간 상환액의 합으로 계산한다. |
 | Q-010 | 필수 산출물 범위 | Resolved | 분석/설계 문서가 필수이며 구현은 선택 사항. |
 
-현재 남아 있는 도메인 open issue는 Q-008 하나이다. Use Case, SSD, Operation Contract, Class Diagram, 설계 Sequence Diagram은 Q-008을 `Open / Needs Discussion`으로 표시하고 진행할 수 있으나, 최종 계산 정확성 확정 전에는 이 합산 범위를 사용자/도메인 담당자에게 확인해야 한다.
+현재 남아 있는 핵심 도메인 미확정 이슈는 없다. Use Case, SSD, Operation Contract, Class Diagram, 설계 Sequence Diagram은 Q-008 확정 정의를 동일하게 사용한다.

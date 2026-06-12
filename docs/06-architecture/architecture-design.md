@@ -142,6 +142,6 @@ sequenceDiagram
 
 | Risk | Mitigation |
 |---|---|
-| Expected mortgage repayment scope ambiguity | Keep repayment-scope interpretation visible in reports/contracts until final domain confirmation. |
+| Mortgage repayment calculation correctness | Keep the resolved Q-008 beneficiary-paid repayment rule centralized in the domain calculator and covered by calculation tests. |
 | Overbuilding pilot | Defer eligibility and external integrations. |
 | Inexperienced users | Prefer report-first UI and simple navigation. |

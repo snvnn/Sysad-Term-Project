@@ -9,7 +9,7 @@
 - Rich Picture는 사용자가 수기로 작성한다.
 - 자격 심사, 90% 모기지 비교 조건, 고용 증거 확인, 주택 가격 검증은 파일럿 시스템 범위 밖이다.
 - 파일럿 시스템은 투자 데이터, 운영 비용 데이터, 모기지 데이터를 이용해 주간 가용 자금을 계산하고 보고서를 출력한다.
-- Q-008 `expected mortgage repayments` 합산 범위는 `Open / Needs Discussion`이다. 본 문서에서는 권장 해석인 “수혜자가 실제로 납부할 예상 상환액”을 working assumption으로 사용한다.
+- Q-008 `expected mortgage repayments`는 활성 mortgage별로 수혜자가 실제로 납부할 것으로 예상되는 주간 상환액의 합으로 확정되었다.
 
 ## 3. Actors
 
@@ -68,8 +68,8 @@
 | Primary Actor | Foundation Manager |
 | Goal | 해당 주의 시작 시 사용 가능한 주택 구매 자금을 계산한다. |
 | Trigger | 매주 첫 영업일에 Manager가 주간 계산을 요청한다. |
-| Main Flow | 시스템은 투자 수익, 운영 비용, 활성 모기지, 예상 보조금을 계산하고 `income - expenses + repayments - grants` 산식으로 starting available amount를 산출한다. |
-| Alternatives | 필수 데이터가 없거나 오래된 경우 경고를 표시한다. Q-008 상환액 범위는 open issue 경고로 표시한다. |
+| Main Flow | 시스템은 투자 수익, 운영 비용, 활성 모기지의 수혜자 예상 주간 상환액, 예상 보조금을 계산하고 `income - expenses + repayments - grants` 산식으로 starting available amount를 산출한다. |
+| Alternatives | 필수 데이터가 없거나 오래된 경우 경고를 표시한다. |
 | Postcondition | WeeklyComputation snapshot과 계산 결과가 저장되고 보고서에 사용할 수 있다. |
 | Related Requirements | FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012, NFR-001, NFR-002 |
 
@@ -105,8 +105,8 @@
 | Supporting Actor | Trustees / Board |
 | Goal | 주간 자금 계산 결과와 입력 요약을 요청 시 출력한다. |
 | Trigger | Manager 또는 Trustees가 주간 결산 보고서를 요청한다. |
-| Main Flow | 시스템은 WeeklyComputation snapshot, 입력 요약, expected grants, starting/remaining available amount, warnings를 표시한다. |
-| Alternatives | 계산 결과가 없으면 먼저 UC-004를 실행하라는 메시지를 표시한다. Q-008은 남은 open issue로 표시한다. |
+| Main Flow | 시스템은 WeeklyComputation snapshot, 입력 요약, expected mortgage repayments, expected grants, starting/remaining available amount, warnings를 표시한다. |
+| Alternatives | 계산 결과가 없으면 먼저 UC-004를 실행하라는 메시지를 표시한다. |
 | Postcondition | 주간 자금 결산서가 화면/파일/인쇄 가능한 형태로 제공된다. |
 | Related Requirements | FR-015, NFR-002, NFR-003 |
 
@@ -173,4 +173,4 @@
 
 - SSD 작성 시 내부 객체를 표시하지 말고 `Actor`와 `MSG Foundation Pilot System` 사이의 system events만 표현한다.
 - UC-004, UC-005, UC-007은 SSD 우선 작성 대상이다.
-- Q-008은 계산 관련 문서와 보고서에서 계속 open issue로 표시한다.
+- Q-008 확정 정의는 계산 관련 문서와 보고서에서 동일하게 사용한다.
