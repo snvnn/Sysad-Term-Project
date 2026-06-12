@@ -79,10 +79,13 @@ Verification:
 
 ### Step 2. System Sequence Diagrams, SSD
 
-Target file:
+Status: `Completed`
+
+Output files:
 
 ```text
 docs/03-requirements/system-sequence-diagrams.md
+docs/03-requirements/system-sequence-diagrams.drawio
 ```
 
 Rules:

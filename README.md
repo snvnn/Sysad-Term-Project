@@ -30,6 +30,8 @@ Full index: [`docs/PROJECT_INDEX.md`](docs/PROJECT_INDEX.md)
 - [`docs/03-requirements/software-requirements-specification.md`](docs/03-requirements/software-requirements-specification.md)
 - [`docs/03-requirements/requirements-traceability-matrix.md`](docs/03-requirements/requirements-traceability-matrix.md)
 - [`docs/03-requirements/use-cases.md`](docs/03-requirements/use-cases.md)
+- [`docs/03-requirements/system-sequence-diagrams.md`](docs/03-requirements/system-sequence-diagrams.md)
+- [`docs/03-requirements/system-sequence-diagrams.drawio`](docs/03-requirements/system-sequence-diagrams.drawio)
 - [`docs/04-domain/domain-model.md`](docs/04-domain/domain-model.md)
 - [`docs/05-context/current-state-and-constraints.md`](docs/05-context/current-state-and-constraints.md)
 
